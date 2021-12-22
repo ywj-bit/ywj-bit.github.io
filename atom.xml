@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>袁文杰</title>
+  <title>祸袁博客</title>
   
-  
+  <subtitle>祸袁</subtitle>
   <link href="http://ywj-bit.github.io/atom.xml" rel="self"/>
   
   <link href="http://ywj-bit.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://ywj-bit.github.io/</id>
   
   <author>
-    <name>ywjjieer</name>
+    <name>ywj</name>
     
   </author>
   
