@@ -430,7 +430,7 @@ header .side-nav .social-link {
         top: 0;
     }
 }
-/*
+
 @-webkit-keyframes scroll-down {
     0% {
         opacity: 0.4;
@@ -549,11 +549,12 @@ header .go-back i {
 .post-cover {
     height: 40vh !important;
 }
-
+/*
 .bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
+*/
 
 .bg-cover:before,
 .bg-cover:after {
@@ -564,7 +565,7 @@ header .go-back i {
     display: block;
     left: 0;
     top: 0;
-    /*content: "";*/
+    content: "";
 }
 
 .bg-cover .container {
