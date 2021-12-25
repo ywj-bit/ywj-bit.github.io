@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="祸袁博客" type="application/atom+xml">
 </head>
 
@@ -35,7 +36,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-image: url(/medias/bocund.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -155,7 +156,7 @@
         <div class="logo-name">祸袁博客</div>
         <div class="logo-desc">
             
-            无可奈何花落去，似曾相识燕归来
+            言念君子，温其如玉
             
         </div>
     </div>
@@ -270,7 +271,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['把所有的春天 都揉进了一个清晨，把所有停不下的言语变成秘密，关上了门；莫名的情愫啊，请问：谁来将它带走呢？只好把岁月化成歌，留在山河。',''],
+                        strings: ['原来喜欢上一个人这么简单，我仅仅是在望向窗外的一瞬间，就再也不能把你忘怀。The original like a person is so simple, I just looked out of the window of the moment, will never forget you.',''],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -632,7 +633,12 @@
         requiredFields: ['nick','mail'], //设置必填项
     });
 </script>
-
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="去评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
             
 			
 			
@@ -914,6 +920,13 @@ $(function () {
 		if (windowWidth > 768) {
 		document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
 		}
+	</script>
+
+	<script type="text/javascript">
+		var OriginTitile = document.title, st; 
+		document.addEventListener("visibilitychange", function () { 
+		document.hidden ? (document.title = "你离开这个页面了", clearTimeout(st)) : (document.title = "欢迎回来", st = setTimeout(function () { 
+		document.title = OriginTitile }, 3e3)) }) 
 	</script>
 
     

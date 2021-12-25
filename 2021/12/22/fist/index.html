@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="祸袁博客" type="application/atom+xml">
 </head>
 
@@ -35,7 +36,7 @@
 
    <style>
     body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-image: url(/medias/bocund.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -155,7 +156,7 @@
         <div class="logo-name">祸袁博客</div>
         <div class="logo-desc">
             
-            无可奈何花落去，似曾相识燕归来
+            言念君子，温其如玉
             
         </div>
     </div>
@@ -389,7 +390,7 @@
                     
                 </div>
             </div>
-
+			
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
@@ -434,23 +435,22 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1>职业生涯，永不停息</h1>
-
 <ul>
-<li><h2>先来张图</h2></li>
+<li>
+<h2>先来张图</h2>
+</li>
 </ul>
-<p> <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2020-10-30%2F5f9bcb9f1f249.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642763339&t=a58841c43cde30c374087dbea6450f81.jpg"></p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F2020-10-30%2F5f9bcb9f1f249.jpg&amp;refer=http%3A%2F%2Fpic1.win4000.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1642763339&amp;t=a58841c43cde30c374087dbea6450f81.jpg" alt=""></p>
 <h2>想看更好看的吗？</h2>
-
 <p><a target="_blank" rel="noopener" href="https://pic.netbian.com/4kmeinv/">彼岸花图网</a></p>
 <ul>
-<li><p>人家赞助了，所以在这里打个广告</p>
-<h2>计划</h2></li>
-<li><p>作为一个入行已经两年的互联网工作者，终于是完成了这个博客的搭建，虽说依靠了不少人的帮忙，但是终归是有了自己的博客，自己去运营维护。</p>
-</li>
-<li><p>后期我会将自己保存的所有文档慢慢的给补充到这个里面，也会慢慢修改这个博客的样式主题，使它能够更舒适更美观</p>
-</li>
-<li><p>敬请期待</p>
-</li>
+<li>人家赞助了，所以在这里打个广告</li>
+</ul>
+<h2>计划</h2>
+<ul>
+<li>作为一个入行已经两年的互联网工作者，终于是完成了这个博客的搭建，虽说依靠了不少人的帮忙，但是终归是有了自己的博客，自己去运营维护。</li>
+<li>后期我会将自己保存的所有文档慢慢的给补充到这个里面，也会慢慢修改这个博客的样式主题，使它能够更舒适更美观</li>
+<li>敬请期待</li>
 </ul>
 
                 
@@ -639,7 +639,7 @@
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">来都来了，赏点币了。</h4>
+            <h4 class="reward-title">支付宝/微信扫码打赏。</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -994,7 +994,12 @@
         requiredFields: ['nick','mail'], //设置必填项
     });
 </script>
-
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="去评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
     
 
     
@@ -1530,6 +1535,13 @@ $(function () {
 		if (windowWidth > 768) {
 		document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
 		}
+	</script>
+
+	<script type="text/javascript">
+		var OriginTitile = document.title, st; 
+		document.addEventListener("visibilitychange", function () { 
+		document.hidden ? (document.title = "你离开这个页面了", clearTimeout(st)) : (document.title = "欢迎回来", st = setTimeout(function () { 
+		document.title = OriginTitile }, 3e3)) }) 
 	</script>
 
     
