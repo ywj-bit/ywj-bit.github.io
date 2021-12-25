@@ -26,7 +26,6 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-
     <script src="/libs/jquery/jquery.min.js"></script>
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="祸袁博客" type="application/atom+xml">
@@ -413,18 +412,23 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    532
+                    521
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
                 
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
@@ -440,28 +444,17 @@
             <div id="articleContent">
                 <h1>Windows下的java安装与配置详细教程</h1>
 <h2>第一步：安装Java</h2>
-<p>JDK 官网下载地址：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p><br>
-因为我下载 Java 是为了开发使用，所以选择 JDK Download 来下载全套的开发工具，当然也包含 JRE，两者的区别可以看我的另一篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tongying/p/13278082.html">https://www.cnblogs.com/tongying/p/13278082.html</a></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/28e21d25857fcdffaa383d0821c498a4.png" alt=""></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/a50ef8a8be04fea04d6e436b6da0e6eb.png" alt=""></p><br>
-现在官网已经升级到 JDK16 了，大家可以根据自己的需要选择下载的版本，我电脑上选择安装 JDK8，这也是目前使用的最广的版本，下载完的安装程序如下：</p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/89ea183e91b4bcb00187b7bb29cc60c4.png" alt=""></p><br>
-双击上面的 exe 程序进行安装，整个过程非常简单，安装路径选择默认 C 盘即可：</p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/a2f996b4ceb26d4e9ada8698e99244f7.png" alt=""></p><br>
-安装完成后，在安装路径下可以看到两个文件夹 JDK 和 JRE。</p></p>
+
+<p>JDK官网下载地址：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p><br>因为我下载Java是为了开发使用，所以选择JDK Download来下载全套的开发工具，当然也包含JRE，两者的区别可以看我的另一篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tongying/p/13278082.html">https://www.cnblogs.com/tongying/p/13278082.html</a></p><br><img src="https://img-blog.csdnimg.cn/img_convert/28e21d25857fcdffaa383d0821c498a4.png"></p><br><img src="https://img-blog.csdnimg.cn/img_convert/a50ef8a8be04fea04d6e436b6da0e6eb.png"></p><br>现在官网已经升级到JDK16了，大家可以根据自己的需要选择下载的版本，我电脑上选择安装JDK8，这也是目前使用的最广的版本，下载完的安装程序如下：</p><br><img src="https://img-blog.csdnimg.cn/img_convert/89ea183e91b4bcb00187b7bb29cc60c4.png"></p><br>双击上面的exe程序进行安装，整个过程非常简单，安装路径选择默认C盘即可：</p><br><img src="https://img-blog.csdnimg.cn/img_convert/a2f996b4ceb26d4e9ada8698e99244f7.png"></p><br>安装完成后，在安装路径下可以看到两个文件夹JDK和JRE。</p></p>
 <h2>第二步：部署环境变量</h2>
 安装好后还需要配置环境变量才能正常使用Java。
-<p>点击计算机 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量，新建如下变量：</p>
-<p>在 &quot;用户变量&quot; 中设置 3 项属性，JAVA_HOME，CLASSPATH (不区分大小写)，PATH，若已存在则点击 &quot;编辑&quot;，注意用分号与前面的隔开，不存在则点击 &quot;新建&quot;。</p>
+
+<p>点击计算机-&gt;属性-&gt; 高级系统设置-&gt; 环境变量，新建如下变量：</p>
+<p>在”用户变量”中设置3项属性，JAVA_HOME，CLASSPATH(不区分大小写)，PATH，若已存在则点击”编辑”，注意用分号与前面的隔开，不存在则点击”新建”。</p>
 <p>变量设置参数如下：</p>
 <p>变量名：JAVA_HOME 变量值：C:\Program Files\Java\jdk1.7.0</p>
-<p>变量名：Path 变量值：% JAVA_HOME%\bin;% JAVA_HOME%\jre\bin 注意：中间有分号，末尾没有分号</p>
-<p>变量名：CLASSPATH 变量值 .;% JAVA_HOME%\lib\dt.jar;% JAVA_HOME%\lib\tools.jar    注意：这前面有一个点‘.;’，中间有分号，末尾没有分号</p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/d801787f27a3a4a57b8c19b74c732dd8.png" alt=""></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/210f6dcf114407172e04634f94a7bf68.png" alt=""></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/e2e5e2fdbe0a07a36198e94e440fb7cf.png" alt=""></p><br>
-确定，保存，退出环境变量配置。在 cmd 窗口输入 java -version 检验一下 java 版本和配置情况，返回如下信息说明 java 已经安装配置完毕：</p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/791d8dbea74dadebfee2d9998d9f1d43.png" alt=""></p></p>
+<p>变量名：Path 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 注意：中间有分号，末尾没有分号</p>
+<p>变量名：CLASSPATH 变量值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar    注意：这前面有一个点‘.;’，中间有分号，末尾没有分号</p><br><img src="https://img-blog.csdnimg.cn/img_convert/d801787f27a3a4a57b8c19b74c732dd8.png"></p><br><img src="https://img-blog.csdnimg.cn/img_convert/210f6dcf114407172e04634f94a7bf68.png"></p><br><img src="https://img-blog.csdnimg.cn/img_convert/e2e5e2fdbe0a07a36198e94e440fb7cf.png"></p><br>确定，保存，退出环境变量配置。在cmd窗口输入java -version检验一下java版本和配置情况，返回如下信息说明java已经安装配置完毕：</p><br><img src="https://img-blog.csdnimg.cn/img_convert/791d8dbea74dadebfee2d9998d9f1d43.png"></p></p>
 <h2>声明：</h2>
 本人只是将别人写好的拿来来做个笔记，原文链接如下，这个还是蛮简单的，自己再次重新部署还麻烦，所以就这么操作，见谅！</br>
 版权声明：本文为CSDN博主「臀总」的原创文章，</br>
@@ -936,15 +929,15 @@
 </div>
 
 <script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
 <script>
     new Valine({
         new Valine({
         el: '#vcomments',
         appId: 'EzvTXvGqw6lf2GmVuAJmFCs7-gzGzoHsz',
         appKey: 'w7HXGrqxqIsHmTD3XAbARukB',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
+        notify: '' === 'true',
+        verify: '' === 'true',
         visitor: '' === 'true',
         avatar: 'monsterid',
         pageSize: '10',
@@ -1297,6 +1290,9 @@
             
             
             
+            
+			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            
             <span id="busuanzi_container_site_pv">
                 |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
@@ -1358,7 +1354,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link ">
+        <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/ywj-bit/ywj-bit.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1537,6 +1533,8 @@ $(function () {
     
     <script src="/libs/others/clicklove.js" async="async"></script>
     
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 	
 	
