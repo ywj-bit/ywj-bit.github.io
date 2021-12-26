@@ -6,7 +6,7 @@
   <link href="http://ywj-bit.github.io/atom.xml" rel="self"/>
   
   <link href="http://ywj-bit.github.io/"/>
-  <updated>2021-12-25T11:18:16.173Z</updated>
+  <updated>2021-12-26T02:46:16.162Z</updated>
   <id>http://ywj-bit.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux环境配置tomcat和redis</title>
+    <link href="http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/"/>
+    <id>http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/</id>
+    <published>2021-12-26T01:31:38.000Z</published>
+    <updated>2021-12-26T02:46:16.162Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Linux 环境配置 Tomcat 和 Redis&lt;/h1&gt;
+&lt;h2&gt;1. Tomcat 安装&lt;/h2&gt;
+&lt;h3&gt;1.1 下载安装包&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装 tomcat 需要先配置 jdk，所以没有配置 jdk 同学，先移步&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://ywj-bit.github.io/categories/Linux/"/>
+    
+    
+    <category term="技术" scheme="http://ywj-bit.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux下MySQL和Java的配置</title>
     <link href="http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/"/>
     <id>http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/</id>
     <published>2021-12-25T09:59:02.000Z</published>
-    <updated>2021-12-25T11:18:16.173Z</updated>
+    <updated>2021-12-26T00:57:45.424Z</updated>
     
     
       
@@ -52,7 +82,7 @@
     <link href="http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/"/>
     <id>http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/</id>
     <published>2021-12-24T11:33:59.000Z</published>
-    <updated>2021-12-25T05:35:57.879Z</updated>
+    <updated>2021-12-26T00:57:32.712Z</updated>
     
     
       
