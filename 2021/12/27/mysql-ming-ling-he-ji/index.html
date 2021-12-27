@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Windows下的java安装与配置, 祸袁博客">
+    <meta name="keywords" content="MySQL命令合集, 祸袁博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Windows下的java安装与配置 | 祸袁博客</title>
+    <title>MySQL命令合集 | 祸袁博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -257,12 +257,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.manzj.net%2Fuploads%2F20200204%2F4ab52d6cd7790ea85d2b18955357ee69.jpg&refer=http%3A%2F%2Fwww.manzj.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642937726&t=f43d61899ca0baeb9b1da9ad22e1bb77')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.duozhishidai.com%2Fdata%2Fattachment%2Fportal%2F202010%2F15%2F003538zz9xczq7ojjcq0pc.jpg&refer=http%3A%2F%2Fwww.duozhishidai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643195767&t=9c4407c8fc17b8f2a3746cf1cf7a8049')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Windows下的java安装与配置</h1>
+                    <h1 class="description center-align post-title">MySQL命令合集</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +378,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
-                                <span class="chip bg-color">软件工具安装与配置</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
                     </div>
@@ -390,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/MySQL/" class="post-category">
+                                MySQL
                             </a>
                         
                     </div>
@@ -403,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-24
+                    2021-12-27
                 </div>
                 
 
@@ -412,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    532
+                    529
                 </div>
                 
 
@@ -442,34 +442,77 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>Windows下的java安装与配置详细教程</h1>
-<h2>第一步：安装Java</h2>
-<p>JDK 官网下载地址：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p><br>
-因为我下载 Java 是为了开发使用，所以选择 JDK Download 来下载全套的开发工具，当然也包含 JRE，两者的区别可以看我的另一篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tongying/p/13278082.html">https://www.cnblogs.com/tongying/p/13278082.html</a><p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/28e21d25857fcdffaa383d0821c498a4.png" alt><p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/a50ef8a8be04fea04d6e436b6da0e6eb.png" alt><p></p><br>
-现在官网已经升级到 JDK16 了，大家可以根据自己的需要选择下载的版本，我电脑上选择安装 JDK8，这也是目前使用的最广的版本，下载完的安装程序如下：<p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/89ea183e91b4bcb00187b7bb29cc60c4.png" alt><p></p><br>
-双击上面的 exe 程序进行安装，整个过程非常简单，安装路径选择默认 C 盘即可：<p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/a2f996b4ceb26d4e9ada8698e99244f7.png" alt><p></p><br>
-安装完成后，在安装路径下可以看到两个文件夹 JDK 和 JRE。<p></p><p></p>
-<h2>第二步：部署环境变量</h2>
-安装好后还需要配置环境变量才能正常使用Java。
-<p>点击计算机 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量，新建如下变量：</p>
-<p>在 &quot;用户变量&quot; 中设置 3 项属性，JAVA_HOME，CLASSPATH (不区分大小写)，PATH，若已存在则点击 &quot;编辑&quot;，注意用分号与前面的隔开，不存在则点击 &quot;新建&quot;。</p>
-<p>变量设置参数如下：</p>
-<p>变量名：JAVA_HOME 变量值：C:\Program Files\Java\jdk1.7.0</p>
-<p>变量名：Path 变量值：% JAVA_HOME%\bin;% JAVA_HOME%\jre\bin 注意：中间有分号，末尾没有分号</p>
-<p>变量名：CLASSPATH 变量值 .;% JAVA_HOME%\lib\dt.jar;% JAVA_HOME%\lib\tools.jar    注意：这前面有一个点‘.;’，中间有分号，末尾没有分号</p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/d801787f27a3a4a57b8c19b74c732dd8.png" alt><p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/210f6dcf114407172e04634f94a7bf68.png" alt><p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/e2e5e2fdbe0a07a36198e94e440fb7cf.png" alt><p></p><br>
-确定，保存，退出环境变量配置。在 cmd 窗口输入 java -version 检验一下 java 版本和配置情况，返回如下信息说明 java 已经安装配置完毕：<p></p><br>
-<img src="https://img-blog.csdnimg.cn/img_convert/791d8dbea74dadebfee2d9998d9f1d43.png" alt><p></p><p></p>
-<h2>声明：</h2>
-本人只是将别人写好的拿来来做个笔记，原文链接如下，这个还是蛮简单的，自己再次重新部署还麻烦，所以就这么操作，见谅！<br>
-版权声明：本文为CSDN博主「臀总」的原创文章，<br>
-原文链接：https://blog.csdn.net/weixin_28724003/article/details/114157778<br>
+                <h1>MySQL命令合集（部分）</h1>
+<h2>1. 启动和停止MySQL</h2>
+<ul>
+<li>
+<p>MySQL 启动</p>
+<p>注意：需要输入你自己的 MySQL 名称</p>
+  <pre class="line-numbers language-none"><code class="language-none">net start mysql  #启动MySQL
+net stop mysql #停止MySQL服务<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>登录 MySQL</p>
+<p>mysql -u 用户名 -p 用户密码<br>
+键入命令 mysql -uroot -p， 回车后提示你输入密码，输入 12345，然后回车即可进入到 mysql 中了，mysql 的提示符是：</p>
+<p>mysql&gt;</p>
+<p>注意，如果是连接到另外的机器上，则需要加入一个参数 - h 机器 IP</p>
+</li>
+</ul>
+<h2>2. 数据库操作CRUD增删改查</h2>
+<ul>
+<li>
+<p>查询数据库</p>
+<p>查询所有： <code>show databases</code> <br>
+ 切换数据库： <code>use 数据库名</code></p>
+</li>
+<li>
+<p>新增增数据库</p>
+<p><code>  create database knowledge_base_daily;  </code></p>
+<p>如果返回 Query OK, 1 row affected (0.00 sec)，说明创建成功</p>
+</li>
+<li>
+<p>修改数据库</p>
+  <pre class="line-numbers language-none"><code class="language-none">ALTER DATABASE 数据库名  #修改数据库名称
+CHARACTER SET 编码      #修改编码 如:utf8
+COLLATE 校对规则         #修改校对规则  如：utf8_general_ci<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>删除数据库</p>
+<p><code>  drop database 数据库名;  </code></p>
+</li>
+<li>
+<p>给 root 用户授权</p>
+  <pre class="line-numbers language-none"><code class="language-none">grant all privileges on *.* to root@&quot;%&quot; identified by &quot;.&quot;;
+flush privileges; #刷新数据库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h2>数据库表的操作</h2>
+<h3>CRUD增删改查</h3>
+<ul>
+<li>创建表  <pre class="line-numbers language-none"><code class="language-none">CREATE TABLE &lt;表名&gt; ([表定义选项])[表选项][分区选项];
+如：
+CREATE TABLE student(id INT(11),name VARCHAR(25),deptId INT(11),salary FLOAT);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>修改表操作  <pre class="line-numbers language-none"><code class="language-none">update MYTABLE set 修改字段 &#x3D; 修改内容 where 条件依据 &#x3D; 条件字段内容;
+如：
+update MYTABLE set name &#x3D; &quot;祸袁&quot; where id &#x3D; &#39;1&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>查询表  <pre class="line-numbers language-none"><code class="language-none">select * from 表名       #查询表中所有的数据
+如：
+select * from student
+&#x2F;&#x2F;根据条件查询所有信息
+select * from 表名 where 条件依据 &#x3D; 条件字段内容;
+select * from student where id &#x3D; 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>删除表  <pre class="line-numbers language-none"><code class="language-none">delete TABLE 表名   #删除一张表
+delete TABLE 表名 where 条件依据 &#x3D; 条件字段内容; 删除表中某一行数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>清空表数据  <pre class="line-numbers language-none"><code class="language-none">delete from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3>未完待续</h3>
+还没有更新完，没时间了，有空再来更，接下来要更新的内容有，导入和导出表数据，数据库和表的备份，左连接和外连接，查询分组，还有Linux下的数据库表的一些操作和注意事项。
                 
             </div>
             <hr/>
@@ -495,7 +538,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/">http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/</a>
+                    <a href="http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/">http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,8 +576,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
-                                    <span class="chip bg-color">软件工具安装与配置</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
                         </div>
@@ -1028,28 +1071,78 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/">
+                <a href="/2021/12/27/mysql-ming-ling-he-ji/">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190311%2F4e1514ef5b1c49aab2e0ae3772c2833c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643023075&t=1b6baf6a0667d73a78b45e048f4367d4" class="responsive-img" alt="Linux下MySQL和Java的配置">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.duozhishidai.com%2Fdata%2Fattachment%2Fportal%2F202010%2F15%2F003538zz9xczq7ojjcq0pc.jpg&refer=http%3A%2F%2Fwww.duozhishidai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643195767&t=9c4407c8fc17b8f2a3746cf1cf7a8049" class="responsive-img" alt="MySQL命令合集">
                         
-                        <span class="card-title">Linux下MySQL和Java的配置</span>
+                        <span class="card-title">MySQL命令合集</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在Linux环境下配置开发环境
+                            MySQL的常用命令记录
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/">
+                    <div class="card-image">
+                        
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.baiyp.ren%2Fimages%2Ftomcat%2Ftomcat01.png&refer=http%3A%2F%2Fwww.baiyp.ren&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643074722&t=75dce4d501c2e9efc7f01109e4a528d2" class="responsive-img" alt="Linux环境配置tomcat和redis">
+                        
+                        <span class="card-title">Linux环境配置tomcat和redis</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Linux环境配置tomcat和redis环境，启动服务
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1067,54 +1160,6 @@
                     
                     <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
                         <span class="chip bg-color">软件工具安装与配置</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/24/linux-chang-yong-ming-ling/">
-                    <div class="card-image">
-                        
-                        <img src="https://img0.baidu.com/it/u=3737974408,2301098957&fm=26&fmt=auto" class="responsive-img" alt="Linux常用命令">
-                        
-                        <span class="card-title">Linux常用命令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Linux常用的基本命令
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
-                        <span class="chip bg-color">服务器操作</span>
                     </a>
                     
                 </div>

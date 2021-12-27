@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>MySQL命令合集</title>
+      <link href="/2021/12/27/mysql-ming-ling-he-ji/"/>
+      <url>/2021/12/27/mysql-ming-ling-he-ji/</url>
+      
+        <content type="html"><![CDATA[<h1>MySQL命令合集（部分）</h1><h2>1. 启动和停止MySQL</h2><ul><li><p>MySQL 启动</p><p>注意：需要输入你自己的 MySQL 名称</p>  <pre class="line-numbers language-none"><code class="language-none">net start mysql  #启动MySQLnet stop mysql #停止MySQL服务<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>登录 MySQL</p><p>mysql -u 用户名 -p 用户密码<br>键入命令 mysql -uroot -p， 回车后提示你输入密码，输入 12345，然后回车即可进入到 mysql 中了，mysql 的提示符是：</p><p>mysql&gt;</p><p>注意，如果是连接到另外的机器上，则需要加入一个参数 - h 机器 IP</p></li></ul><h2>2. 数据库操作CRUD增删改查</h2><ul><li><p>查询数据库</p><p>查询所有： <code>show databases</code> <br> 切换数据库： <code>use 数据库名</code></p></li><li><p>新增增数据库</p><p><code>  create database knowledge_base_daily;  </code></p><p>如果返回 Query OK, 1 row affected (0.00 sec)，说明创建成功</p></li><li><p>修改数据库</p>  <pre class="line-numbers language-none"><code class="language-none">ALTER DATABASE 数据库名  #修改数据库名称CHARACTER SET 编码      #修改编码 如:utf8COLLATE 校对规则         #修改校对规则  如：utf8_general_ci<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>删除数据库</p><p><code>  drop database 数据库名;  </code></p></li><li><p>给 root 用户授权</p>  <pre class="line-numbers language-none"><code class="language-none">grant all privileges on *.* to root@&quot;%&quot; identified by &quot;.&quot;;flush privileges; #刷新数据库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li></ul><h2>数据库表的操作</h2><h3>CRUD增删改查</h3><ul><li>创建表  <pre class="line-numbers language-none"><code class="language-none">CREATE TABLE &lt;表名&gt; ([表定义选项])[表选项][分区选项];如：CREATE TABLE student(id INT(11),name VARCHAR(25),deptId INT(11),salary FLOAT);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li>修改表操作  <pre class="line-numbers language-none"><code class="language-none">update MYTABLE set 修改字段 &#x3D; 修改内容 where 条件依据 &#x3D; 条件字段内容;如：update MYTABLE set name &#x3D; &quot;祸袁&quot; where id &#x3D; &#39;1&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li>查询表  <pre class="line-numbers language-none"><code class="language-none">select * from 表名       #查询表中所有的数据如：select * from student&#x2F;&#x2F;根据条件查询所有信息select * from 表名 where 条件依据 &#x3D; 条件字段内容;select * from student where id &#x3D; 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>删除表  <pre class="line-numbers language-none"><code class="language-none">delete TABLE 表名   #删除一张表delete TABLE 表名 where 条件依据 &#x3D; 条件字段内容; 删除表中某一行数据<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li>清空表数据  <pre class="line-numbers language-none"><code class="language-none">delete from 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><h3>未完待续</h3>还没有更新完，没时间了，有空再来更，接下来要更新的内容有，导入和导出表数据，数据库和表的备份，左连接和外连接，查询分组，还有Linux下的数据库表的一些操作和注意事项。]]></content>
+      
+      
+      <categories>
+          
+          <category> MySQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux环境配置tomcat和redis</title>
       <link href="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/"/>
       <url>/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/</url>
@@ -20,7 +45,7 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 软件工具安装与配置 </tag>
             
         </tags>
       
@@ -45,7 +70,7 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 软件工具安装与配置 </tag>
             
         </tags>
       
@@ -70,7 +95,7 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 软件工具安装与配置 </tag>
             
         </tags>
       
@@ -95,7 +120,7 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 服务器操作 </tag>
             
         </tags>
       

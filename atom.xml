@@ -6,7 +6,7 @@
   <link href="http://ywj-bit.github.io/atom.xml" rel="self"/>
   
   <link href="http://ywj-bit.github.io/"/>
-  <updated>2021-12-26T02:57:22.454Z</updated>
+  <updated>2021-12-27T11:52:20.012Z</updated>
   <id>http://ywj-bit.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>MySQL命令合集</title>
+    <link href="http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/"/>
+    <id>http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/</id>
+    <published>2021-12-27T11:14:58.000Z</published>
+    <updated>2021-12-27T11:52:20.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;MySQL命令合集（部分）&lt;/h1&gt;
+&lt;h2&gt;1. 启动和停止MySQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL 启动&lt;/p&gt;
+&lt;p&gt;注意：需要输入你自己的 MySQL 名称&lt;/p&gt;
+  &lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="MySQL" scheme="http://ywj-bit.github.io/categories/MySQL/"/>
+    
+    
+    <category term="数据库" scheme="http://ywj-bit.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux环境配置tomcat和redis</title>
     <link href="http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/"/>
     <id>http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/</id>
     <published>2021-12-26T01:31:38.000Z</published>
-    <updated>2021-12-26T02:57:22.454Z</updated>
+    <updated>2021-12-27T11:50:19.895Z</updated>
     
     
       
@@ -42,7 +73,7 @@
     <category term="Linux" scheme="http://ywj-bit.github.io/categories/Linux/"/>
     
     
-    <category term="技术" scheme="http://ywj-bit.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="软件工具安装与配置" scheme="http://ywj-bit.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -51,7 +82,7 @@
     <link href="http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/"/>
     <id>http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/</id>
     <published>2021-12-25T09:59:02.000Z</published>
-    <updated>2021-12-26T00:57:45.424Z</updated>
+    <updated>2021-12-27T11:50:10.132Z</updated>
     
     
       
@@ -73,7 +104,7 @@
     <category term="Linux" scheme="http://ywj-bit.github.io/categories/Linux/"/>
     
     
-    <category term="技术" scheme="http://ywj-bit.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="软件工具安装与配置" scheme="http://ywj-bit.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -82,7 +113,7 @@
     <link href="http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/"/>
     <id>http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/</id>
     <published>2021-12-24T11:33:59.000Z</published>
-    <updated>2021-12-26T00:57:32.712Z</updated>
+    <updated>2021-12-27T11:12:26.217Z</updated>
     
     
       
@@ -100,7 +131,7 @@
     <category term="Java" scheme="http://ywj-bit.github.io/categories/Java/"/>
     
     
-    <category term="技术" scheme="http://ywj-bit.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="软件工具安装与配置" scheme="http://ywj-bit.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
     
   </entry>
   
@@ -109,7 +140,7 @@
     <link href="http://ywj-bit.github.io/2021/12/24/linux-chang-yong-ming-ling/"/>
     <id>http://ywj-bit.github.io/2021/12/24/linux-chang-yong-ming-ling/</id>
     <published>2021-12-24T06:24:46.000Z</published>
-    <updated>2021-12-24T11:25:31.398Z</updated>
+    <updated>2021-12-27T11:10:13.549Z</updated>
     
     
       
@@ -127,7 +158,7 @@
     <category term="Linux" scheme="http://ywj-bit.github.io/categories/Linux/"/>
     
     
-    <category term="技术" scheme="http://ywj-bit.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="服务器操作" scheme="http://ywj-bit.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/"/>
     
   </entry>
   
