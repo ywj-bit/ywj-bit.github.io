@@ -412,14 +412,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    505
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    8 分
                 </div>
                 
 
@@ -505,12 +505,156 @@
   <a href="/2021/12/24/linux-chang-yong-ming-ling/" title="Linux常用启动服务常用命令">Linux常用启动服务常用命令</a>
 </li>
 </ul>
+<p>article/details/80467224)</p>
+<h2>2. 安装Rdis</h2>
+<h3>2.1 Redis 介绍</h3>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRedis是当前比较热门的NOSQL系统之一，它是一个key-value存储系统。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp和Memcache类似，但很大程度补偿了Memcache的不足，它支持存储的value类型相对更多，包括<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstring、list、set、zset和hash。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这些数据类型都支持push/pop、add/remove及取交集并集和差集及更丰富的操作。在此基础上，Redis<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp支持各种不同方式的排序。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    和Memcache一样，Redis数据都是缓存在计算机内存中，不同的是，Memcache只能将数据缓存到内<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp存中，无法自动定期写入硬盘，<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这就表示，一断电或重启，内存清空，数据丢失。所以Memcache的应用场景适用于缓存无需持久化的<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp数据。而Redis不同的是它会周期性的把更新的数据写入磁盘或者把修改操作写入追加的记录文件，实<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp现数据的持久化。
+<h3>2.2 Redis 安装</h3>
+<ul>
+<li>
+<p>下载 redis 进入官网下载地址： <a target="_blank" rel="noopener" href="https://redis.io/download">https://redis.io/download</a><br>
+<img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re1.png" alt></p>
+</li>
+<li>
+<p>解压</p>
+<p>通过远程管理工具，将压缩包拷贝到 Linux 服务器中，执行解压操作。</p>
+  <pre class="line-numbers language-none"><code class="language-none">cd &#x2F;local 切换到redis安装包所在目录下
+tar zxvf 安装包全部名字包括后缀<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>安装</p>
+<p>为了统一方便管理，我们要将这个文件移动到指定的目录下</p>
+  <pre class="line-numbers language-none"><code class="language-none">mv &#x2F;root&#x2F;redis-5.0.7 &#x2F;usr&#x2F;local&#x2F;redis #移动文件夹位置并修改名称<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>执行 make 命令进行编译</p>
+  <pre class="line-numbers language-none"><code class="language-none">make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>安装 redis</p>
+  <pre class="line-numbers language-none"><code class="language-none">make PREFIX&#x3D;&#x2F;usr&#x2F;local&#x2F;redis install #安装并指定安装路径，方便管理，统一在redis目录下<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>启动 Redis</p>
+  <pre class="line-numbers language-none"><code class="language-none">.&#x2F;bin&#x2F;redis-server&amp; .&#x2F;redis.conf  #后台启动方式
+.&#x2F;bin&#x2F;redis-server .&#x2F;redis.conf   #显示启动方式
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>修改 redis.conf 文件</p>
+<p>在目录 /usr/local/redis 下有一个 redis.conf 的配置文件。我们上面启动方式就是执行了该配置文件的配置运行的。我么可以通过 cat、vim、less 等 Linux 内置的读取命令读取该文件。</p>
+</li>
+<li>
+<p>redis.conf 参数</p>
+</li>
+</ul>
+<table>
+  <tr>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>说明</th>
+  </tr>
+  <tr>
+    <td>daemonize</td>
+    <td>yes、no</td>
+    <td>yes表示启用守护进程，默认是no即不以守护进程方式运行。其中Windows系统下不支持启用守护进程方式运行</td>
+  </tr>
+  <tr>
+    <td>port</td>
+    <td></td>
+    <td>指定 Redis 监听端口，默认端口为 6379</td>
+  </tr>
+  <tr>
+  <td>bind</td>
+  <td></td>
+  <td>	绑定的主机地址,如果需要设置远程访问则直接将这个属性备注下或者改为bind * 即可,这个属性和下面的protected-mode控制了是否可以远程访问 。</td>
+  </tr>
+  <tr>
+  <td>protected-mode</td>
+  <td>yes 、no</td>
+  <td>保护模式，该模式控制外部网是否可以连接redis服务，默认是yes,所以默认我们外网是无法访问的，如需外网连接rendis服务则需要将此属性改为no。</td>
+  </tr>
+  <tr>
+  <td>timeout</td>
+  <td>300</td>
+  <td>当客户端闲置多长时间后关闭连接，如果指定为 0，表示关闭该功能</td>
+  </tr>
+  <tr>
+  <td>loglevel</td>
+  <td>debug、verbose、notice、warning</td>
+  <td>日志级别，默认为 notice</td>
+  </tr>
+  <tr>
+  <td>databases</td>
+  <td>16</td>
+  <td>设置数据库的数量，默认的数据库是0。整个通过客户端工具可以看得到
+  </td>
+  </tr>
+  <tr>
+  <td>rdbcompression</td>
+  <td>yes、no</td>
+  <td>指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该选项，但会导致数据库文件变的巨大。</td>
+  </tr>
+  <tr>
+  <td>dbfilename</td>
+  <td>dump.rdb	</td>
+  <td>指定本地数据库文件名，默认值为 dump.rdb</td>
+  </tr>
+  <tr>
+  <td>dir</td>
+  <td></td>
+  <td>指定本地数据库存放目录</td>
+  </tr>
+  <tr>
+  <td>requirepass</td>
+  <td></td>
+  <td>设置 Redis 连接密码，如果配置了连接密码，客户端在连接 Redis 时需要通过 AUTH < password > 命令提供密码，默认关闭</td>
+  </tr>
+  <tr>
+  <td>maxclients</td>
+  <td>0</td>
+  <td>设置同一时间最大客户端连接数，默认无限制，Redis 可以同时打开的客户端连接数为 Redis 进程可以打开的最大文件描述符数，如果设置 maxclients 0，表示不作限制。当客户端连接数到达限制时，Redis 会关闭新的连接并向客户端返回 max number of clients reached 错误信息。</td>
+  </tr>
+  <tr>
+  <td>maxmemory</td>
+  <td>XXX < bytes ></td>
+  <td>指定 Redis 最大内存限制，Redis 在启动时会把数据加载到内存中，达到最大内存后，Redis 会先尝试清除已到期或即将到期的 Key，当此方法处理 后，仍然到达最大内存设置，将无法再进行写入操作，但仍然可以进行读取操作。Redis 新的 vm 机制，会把 Key 存放内存，Value 会存放在 swap 区。配置项值范围列里XXX为数值。</td>
+  </tr>
+</table>
+<ul>
+<li>
+<p>修改内容</p>
+<p>这里我要将 daemonize 改为 yes，不然我每次启动都得在 redis-server 命令后面加符号 &amp;，不这样操作则只要回到 Linux 控制台则 redis 服务会自动关闭，同时也将 bind 注释，将 protected-mode 设置为 no。这样启动后我就可以在外网访问了。<br><br>
+更改方式</p>
+  <pre class="line-numbers language-none"><code class="language-none">vim &#x2F;usr&#x2F;local&#x2F;redis&#x2F;redis.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>通过 /daemonize  查找到属性，默认是 no，更改为 yes 即可。 (通过 / 关键字查找出现多个结果则使用 n 字符切换到下一个即可，查找到结果后输入:noh 退回到正常模式)</p>
+<p>其他两个属性也是同样方式查找和编辑即可。</p>
+</li>
+</ul>
+<h3>2.3  查看Redis是否正在运行</h3>
+<ul>
+<li>1、采取查看进程方式  <pre class="line-numbers language-none"><code class="language-none">ps -aux | grep redis<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re2.png" alt></li>
+<li>2、采取端口监听查看方式  <pre class="line-numbers language-none"><code class="language-none">netstat -lanp | grep 6379<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re3.png" alt></li>
+</ul>
+<h3>2.4 Redis其他命令</h3>
+<ul>
+<li>
+<p>redis-cli</p>
+<p>redis-cli 是连接本地 redis 服务的一个命令，通过该命令后可以既然怒 redis 的脚本控制台。如下图</p>
+<p><img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re4.png" alt></p>
+<p>输入 exit 可以退出 redis 脚本控制台</p>
+</li>
+<li>
+<p>关闭运行中的 Redis 服务<br>
+输入 redis-cli 进入控制台后输入命令 shutdown 即可关闭运行中的 Redis 服务了。如下图:</p>
+<p><img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re5.png" alt></p>
+</li>
+</ul>
 <h2>声明</h2>
 <ul>
-<li>本文部分内容转载引用 CSDN 博主：<a target="_blank" rel="noopener" href="https://blog.csdn.net/fukai8350/article/details/80467224">LuuCloud</a></li>
+<li>本文 Tomcat 部分内容转载引用 CSDN 博主：<a target="_blank" rel="noopener" href="https://blog.csdn.net/fukai8350/">LuuCloud</a></li>
+<li>本文 Redis 部分内容转载引用 CSDN 博主：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/hunanzp/p/12304622.html">长沙大鹏</a></li>
 </ul>
-<h2>2. 安装Rdis</h2>
-<h3>敬请期待。。。</h3>
+
                 
             </div>
             <hr/>
