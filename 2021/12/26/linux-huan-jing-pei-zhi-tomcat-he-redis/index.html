@@ -412,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.1k
                 </div>
                 
 
@@ -537,6 +537,9 @@ tar zxvf 安装包全部名字包括后缀<span aria-hidden="true" class="line-n
 .&#x2F;bin&#x2F;redis-server .&#x2F;redis.conf   #显示启动方式
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
+</ul>
+<h3>2.3 redis.conf文件</h3>
+<ul>
 <li>
 <p>修改 redis.conf 文件</p>
 <p>在目录 /usr/local/redis 下有一个 redis.conf 的配置文件。我们上面启动方式就是执行了该配置文件的配置运行的。我么可以通过 cat、vim、less 等 Linux 内置的读取命令读取该文件。</p>
@@ -547,8 +550,8 @@ tar zxvf 安装包全部名字包括后缀<span aria-hidden="true" class="line-n
 </ul>
 <table>
   <tr>
-    <th>姓名</th>
-    <th>性别</th>
+    <th>配置项名称</th>
+    <th>配置项值范围</th>
     <th>说明</th>
   </tr>
   <tr>
@@ -628,14 +631,14 @@ tar zxvf 安装包全部名字包括后缀<span aria-hidden="true" class="line-n
 <p>其他两个属性也是同样方式查找和编辑即可。</p>
 </li>
 </ul>
-<h3>2.3  查看Redis是否正在运行</h3>
+<h3>2.4  查看Redis是否正在运行</h3>
 <ul>
 <li>1、采取查看进程方式  <pre class="line-numbers language-none"><code class="language-none">ps -aux | grep redis<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re2.png" alt></li>
 <li>2、采取端口监听查看方式  <pre class="line-numbers language-none"><code class="language-none">netstat -lanp | grep 6379<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <img src="/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/Redis/re3.png" alt></li>
 </ul>
-<h3>2.4 Redis其他命令</h3>
+<h3>2.5 Redis其他命令</h3>
 <ul>
 <li>
 <p>redis-cli</p>
