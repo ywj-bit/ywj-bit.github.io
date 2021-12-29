@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Windows下的java安装与配置, 祸袁博客">
+    <meta name="keywords" content="Linux防火墙及开放端口管理, 祸袁博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Windows下的java安装与配置 | 祸袁博客</title>
+    <title>Linux防火墙及开放端口管理 | 祸袁博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -257,12 +257,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.manzj.net%2Fuploads%2F20200204%2F4ab52d6cd7790ea85d2b18955357ee69.jpg&refer=http%3A%2F%2Fwww.manzj.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1642937726&t=f43d61899ca0baeb9b1da9ad22e1bb77')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fx0.ifengimg.com%2Fres%2F2019%2FF44796BF5BB930F78A9CF008DD2F94BE5890F66A_size53_w634_h445.jpeg&refer=http%3A%2F%2Fx0.ifengimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643338737&t=696c05f1e2a2b451b9a016157294acb8')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Windows下的java安装与配置</h1>
+                    <h1 class="description center-align post-title">Linux防火墙及开放端口管理</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +378,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
-                                <span class="chip bg-color">软件工具安装与配置</span>
+                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
+                                <span class="chip bg-color">服务器操作</span>
                             </a>
                         
                     </div>
@@ -390,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java/" class="post-category">
-                                Java
+                            <a href="/categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -403,7 +403,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-24
+                    2021-12-29
                 </div>
                 
 
@@ -412,14 +412,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -442,23 +442,113 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>Windows下的java安装与配置详细教程</h1>
-<h2>第一步：安装Java</h2>
+                <h1>Linux防火墙管理</h1>
+<h2>1.防火墙开启关闭</h2>
 
-<p>JDK官网下载地址：<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a></p><br>因为我下载Java是为了开发使用，所以选择JDK Download来下载全套的开发工具，当然也包含JRE，两者的区别可以看我的另一篇博客：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tongying/p/13278082.html">https://www.cnblogs.com/tongying/p/13278082.html</a><p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/28e21d25857fcdffaa383d0821c498a4.png"><p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/a50ef8a8be04fea04d6e436b6da0e6eb.png"><p></p><br>现在官网已经升级到JDK16了，大家可以根据自己的需要选择下载的版本，我电脑上选择安装JDK8，这也是目前使用的最广的版本，下载完的安装程序如下：<p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/89ea183e91b4bcb00187b7bb29cc60c4.png"><p></p><br>双击上面的exe程序进行安装，整个过程非常简单，安装路径选择默认C盘即可：<p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/a2f996b4ceb26d4e9ada8698e99244f7.png"><p></p><br>安装完成后，在安装路径下可以看到两个文件夹JDK和JRE。<p></p><p></p>
-<h2>第二步：部署环境变量</h2>
-安装好后还需要配置环境变量才能正常使用Java。
+<ol>
+<li><p>查看防火墙状态，是否开启？</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>开启关闭防火墙</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld  #开启防火墙
+systemctl stop firewalld    #关闭防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>查看所有开启的端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 注：启动防火墙后，默认没有开启任何端口，需要手动开启端口</p>
+</li>
+<li><p>防火墙开启端口访问</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 命令含义：  –zone #作用域    –add-port=80/tcp #添加端口，格式为：端口/通讯协议    –permanent #永久生效，没有此参数重启后失效</p>
+<p> 注：开启后需要重启防火墙才生效</p>
+</li>
+<li><p>重启防火墙</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/1.png"><br> 再执行 firewall-cmd –list-ports查看一次，则发现已开启：</p>
+<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/2.png"></p>
+</li>
+<li><p>其他常用命令：</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state         #查看防火墙状态，是否是running
+firewall-cmd --reload        #重新载入配置，比如添加规则之后，需要执行此命令
+firewall-cmd --get-zones     #列出支持的zone
+firewall-cmd --get-services  #列出支持的服务，在列表中的服务是放行的
+firewall-cmd --query-service ftp   #查看ftp服务是否支持，返回yes或者no
+firewall-cmd --add-service&#x3D;ftp      #临时开放ftp服务
+firewall-cmd --add-service&#x3D;ftp --permanent    #永久开放ftp服务
+firewall-cmd --remove-service&#x3D;ftp --permanent  #永久移除ftp服务
+firewall-cmd --add-port&#x3D;80&#x2F;tcp --permanent    #永久添加80端口 
+firewall-cmd --remove-port&#x3D;80&#x2F;tcp --permanent    #永久移除80端口 
+firewall-cmd --zone&#x3D;public --list-ports   #查看已开放的端口
+iptables -L -n               #查看规则，这个命令是和iptables的相同的
+man firewall-cmd   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2>2. 端口管理</h2></li>
+<li><p>开放端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;5672&#x2F;tcp --permanent   # 开放5672端口
+firewall-cmd --zone&#x3D;public --remove-port&#x3D;5672&#x2F;tcp --permanent  #关闭5672端口
+firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p>查看防火墙所有开放的端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>关闭防火墙</p>
+<p> 如果要开放的端口太多，嫌麻烦，可以关闭防火墙，安全性自行评估</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看防火墙状态</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>查看监听的端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/3.png"></p>
+</li>
+<li><p>检查端口被哪个进程占用</p>
+ <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt |grep 5672<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/4.png"></p>
+</li>
+<li><p>查看进程的详细信息</p>
+ <pre class="line-numbers language-none"><code class="language-none">ps 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/5.png"></p>
+</li>
+<li><p>中止进程</p>
+ <pre class="line-numbers language-none"><code class="language-none">kill -9 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2>3. Centos 不同版本之间的命令差别</h2>
+<h3>Centos 6.x版本 iptables</h3></li>
+<li><p>查看防火墙状态</p>
+ <pre class="line-numbers language-none"><code class="language-none">service iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 如果返回 <code>iptables：Firewall is not runing.</code> 说明防火墙没有开启</p>
+ <pre class="line-numbers language-none"><code class="language-none">开启防火墙：service iptables start
+关闭防火墙：service iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3>Centos 7版本 firewall</h3></li>
+<li><p>查看当前防火墙状态</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 执行后可以看到绿色字样标注的“active（running）”，说明防火墙是开启状态</p>
+</li>
+<li><p>关闭防火墙命令</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 关闭后，使用命令systemctl status firewalld.service 可以看到，disavtive（dead）的字样，说明防火墙已经关闭</p>
+</li>
+<li><p>开启防火墙</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>关闭开机自启动，禁止防火墙服务器</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>开启开机启动</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl enable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3>CentOS7 默认使用firewalld防火墙，如果想换回iptables防火墙，可关闭firewalld并安装iptables。</h3></li>
+<li><p>安装iptables-services</p>
+ <pre class="line-numbers language-none"><code class="language-none">yum install iptables-services<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>修改防火墙配置文件</p>
+ <pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;sysconfig&#x2F;iptables<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 默认文件是：<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/6.png"><br> 在修改之前使用telnet命令查看端口是否开放。</p>
+<p> 1.启动telnet。控制面板–&gt;程序和功能–&gt;打开或关闭windows功能–&gt;勾选Telnet的两个选项。</p>
+<p> 2.打开cmd窗口，输入telnet，如果端口关闭或者无法连接，则显示不能打开到主机的链接，链接失败；端口打开的情况下，链接成功，则进入telnet页面（全黑的），证明端口可用。</p>
+<p> （1）telnet IP 端口</p>
+<p> （2）telnet 域名 端口。<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/7.png"></p>
+ <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>添加端口80、8080、3306、3690端口<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/10.png"></p>
+ <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 注意：添加在端口22上面或者下面，不要放在最后，不然不起作用。</p>
+</li>
+<li><p>重启防火墙使配置生效</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl restart iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 刚刚yum install iptables.service之后系统如果没有重启，iptables.service是找不到的，会报unit not fount。耽误时间的小坑！</p>
+<p> 设置防火墙开机启动: </p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl enable iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
 
-<p>点击计算机-&gt;属性-&gt; 高级系统设置-&gt; 环境变量，新建如下变量：</p>
-<p>在”用户变量”中设置3项属性，JAVA_HOME，CLASSPATH(不区分大小写)，PATH，若已存在则点击”编辑”，注意用分号与前面的隔开，不存在则点击”新建”。</p>
-<p>变量设置参数如下：</p>
-<p>变量名：JAVA_HOME 变量值：C:\Program Files\Java\jdk1.7.0</p>
-<p>变量名：Path 变量值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin 注意：中间有分号，末尾没有分号</p>
-<p>变量名：CLASSPATH 变量值 .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar    注意：这前面有一个点‘.;’，中间有分号，末尾没有分号</p><br><img src="https://img-blog.csdnimg.cn/img_convert/d801787f27a3a4a57b8c19b74c732dd8.png"><p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/210f6dcf114407172e04634f94a7bf68.png"><p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/e2e5e2fdbe0a07a36198e94e440fb7cf.png"><p></p><br>确定，保存，退出环境变量配置。在cmd窗口输入java -version检验一下java版本和配置情况，返回如下信息说明java已经安装配置完毕：<p></p><br><img src="https://img-blog.csdnimg.cn/img_convert/791d8dbea74dadebfee2d9998d9f1d43.png"><p></p><p></p>
-<h2>声明：</h2>
-本人只是将别人写好的拿来来做个笔记，原文链接如下，这个还是蛮简单的，自己再次重新部署还麻烦，所以就这么操作，见谅！<br>
-版权声明：本文为CSDN博主「臀总」的原创文章，<br>
-原文链接：https://blog.csdn.net/weixin_28724003/article/details/114157778<br>
                 
             </div>
             <hr/>
@@ -484,7 +574,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/">http://ywj-bit.github.io/2021/12/24/windows-xia-de-java-an-zhuang-yu-pei-zhi/</a>
+                    <a href="http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/">http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -522,8 +612,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
-                                    <span class="chip bg-color">软件工具安装与配置</span>
+                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
+                                    <span class="chip bg-color">服务器操作</span>
                                 </a>
                             
                         </div>
@@ -1017,75 +1107,28 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/">
+                <a href="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190311%2F4e1514ef5b1c49aab2e0ae3772c2833c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643023075&t=1b6baf6a0667d73a78b45e048f4367d4" class="responsive-img" alt="Linux下MySQL和Java的配置">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fx0.ifengimg.com%2Fres%2F2019%2FF44796BF5BB930F78A9CF008DD2F94BE5890F66A_size53_w634_h445.jpeg&refer=http%3A%2F%2Fx0.ifengimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643338737&t=696c05f1e2a2b451b9a016157294acb8" class="responsive-img" alt="Linux防火墙及开放端口管理">
                         
-                        <span class="card-title">Linux下MySQL和Java的配置</span>
+                        <span class="card-title">Linux防火墙及开放端口管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在Linux环境下配置开发环境
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-25
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Linux/" class="post-category">
-                                    Linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">
-                        <span class="chip bg-color">软件工具安装与配置</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/24/linux-chang-yong-ming-ling/">
-                    <div class="card-image">
-                        
-                        <img src="https://img0.baidu.com/it/u=3737974408,2301098957&fm=26&fmt=auto" class="responsive-img" alt="Linux常用命令">
-                        
-                        <span class="card-title">Linux常用命令</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Linux常用的基本命令
+                            Linux的防火墙管理
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-29
                             </span>
                         <span class="publish-author">
                             
@@ -1099,11 +1142,60 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
                         <span class="chip bg-color">服务器操作</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/27/mysql-ming-ling-he-ji/">
+                    <div class="card-image">
+                        
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.duozhishidai.com%2Fdata%2Fattachment%2Fportal%2F202010%2F15%2F003538zz9xczq7ojjcq0pc.jpg&refer=http%3A%2F%2Fwww.duozhishidai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643195767&t=9c4407c8fc17b8f2a3746cf1cf7a8049" class="responsive-img" alt="MySQL命令合集">
+                        
+                        <span class="card-title">MySQL命令合集</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MySQL的常用命令记录
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
                     </a>
                     
                 </div>

@@ -6,7 +6,7 @@
   <link href="http://ywj-bit.github.io/atom.xml" rel="self"/>
   
   <link href="http://ywj-bit.github.io/"/>
-  <updated>2021-12-28T08:59:09.033Z</updated>
+  <updated>2021-12-29T03:36:39.439Z</updated>
   <id>http://ywj-bit.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux防火墙及开放端口管理</title>
+    <link href="http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/"/>
+    <id>http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/</id>
+    <published>2021-12-29T02:54:29.000Z</published>
+    <updated>2021-12-29T03:36:39.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Linux防火墙管理&lt;/h1&gt;
+&lt;h2&gt;1.防火墙开启关闭&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;查看防火墙状态，是否开启？&lt;/p&gt;
+ &lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://ywj-bit.github.io/categories/Linux/"/>
+    
+    
+    <category term="服务器操作" scheme="http://ywj-bit.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL命令合集</title>
     <link href="http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/"/>
     <id>http://ywj-bit.github.io/2021/12/27/mysql-ming-ling-he-ji/</id>
     <published>2021-12-27T11:14:58.000Z</published>
-    <updated>2021-12-28T08:59:09.033Z</updated>
+    <updated>2021-12-29T02:55:23.264Z</updated>
     
     
       
@@ -30,10 +60,10 @@
         
     <summary type="html">&lt;h1&gt;MySQL命令合集（部分）&lt;/h1&gt;
 &lt;h2&gt;1. 启动和停止MySQL&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;MySQL 启动&lt;/p&gt;
-&lt;p&gt;注意：需要输入你自己的 MySQL 名称&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;MySQL启动&lt;/p&gt;
+&lt;p&gt;  注意:需要输入你自己的MySQL名称&lt;/p&gt;
   &lt;pre class=&quot;line-numbers</summary>
         
       
@@ -52,7 +82,7 @@
     <link href="http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/"/>
     <id>http://ywj-bit.github.io/2021/12/26/linux-huan-jing-pei-zhi-tomcat-he-redis/</id>
     <published>2021-12-26T01:31:38.000Z</published>
-    <updated>2021-12-28T11:18:13.256Z</updated>
+    <updated>2021-12-29T03:38:09.843Z</updated>
     
     
       
@@ -62,9 +92,9 @@
     <summary type="html">&lt;h1&gt;Linux 环境配置 Tomcat 和 Redis&lt;/h1&gt;
 &lt;h2&gt;1. Tomcat 安装&lt;/h2&gt;
 &lt;h3&gt;1.1 下载安装包&lt;/h3&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;安装 tomcat 需要先配置 jdk，所以没有配置 jdk 同学，先移步&lt;a</summary>
+&lt;li&gt;&lt;p&gt;安装tomcat需要先配置jdk，所以没有配置jdk同学，先移步&lt;a</summary>
         
       
     
@@ -82,7 +112,7 @@
     <link href="http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/"/>
     <id>http://ywj-bit.github.io/2021/12/25/linux-xia-mysql-he-java-de-pei-zhi/</id>
     <published>2021-12-25T09:59:02.000Z</published>
-    <updated>2021-12-28T10:09:49.098Z</updated>
+    <updated>2021-12-29T02:55:01.685Z</updated>
     
     
       
@@ -92,10 +122,10 @@
     <summary type="html">&lt;h1&gt;Linux下MySQL和Java的配置&lt;/h1&gt;
 &lt;h2&gt;1. Java的配置&lt;/h2&gt;
 &lt;h3&gt;1.1 查看Java环境&lt;/h3&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;查看安装的 Linux 系统中是否已经安装了 Java，输入命令&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;  java</summary>
+&lt;li&gt;&lt;p&gt;查看安装的Linux系统中是否已经安装了Java，输入命令&lt;/p&gt;
+&lt;p&gt;  &lt;code&gt;  java</summary>
         
       
     
@@ -122,7 +152,8 @@
         
     <summary type="html">&lt;h1&gt;Windows下的java安装与配置详细教程&lt;/h1&gt;
 &lt;h2&gt;第一步：安装Java&lt;/h2&gt;
-&lt;p&gt;JDK 官网下载地址：&lt;a</summary>
+
+&lt;p&gt;JDK官网下载地址：&lt;a</summary>
         
       
     
@@ -148,8 +179,10 @@
         
         
     <summary type="html">&lt;h1&gt; Linux的介绍及常用命令&lt;/h1&gt;
+
 &lt;h3&gt;Linux简介&lt;h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://img0.baidu.com/it/u=3005879718,4119137912&amp;amp;fm=26&amp;amp;fmt=auto&quot;</summary>
+
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -175,12 +208,11 @@
         
         
     <summary type="html">&lt;h1&gt;职业生涯，永不停息&lt;/h1&gt;
+
 &lt;ul&gt;
-&lt;li&gt;
-&lt;h2&gt;先来张图&lt;/h2&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;h2&gt;先来张图&lt;/h2&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt; &lt;img</summary>
         
       
     
