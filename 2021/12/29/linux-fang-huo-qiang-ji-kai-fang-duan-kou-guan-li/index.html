@@ -444,28 +444,36 @@
             <div id="articleContent">
                 <h1>Linux防火墙管理</h1>
 <h2>1.防火墙开启关闭</h2>
-
 <ol>
-<li><p>查看防火墙状态，是否开启？</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>开启关闭防火墙</p>
+<li>
+<p>查看防火墙状态，是否开启？</p>
+ <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>开启关闭防火墙</p>
  <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld  #开启防火墙
-systemctl stop firewalld    #关闭防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li><p>查看所有开启的端口</p>
+systemctl stop firewalld    #关闭防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>查看所有开启的端口</p>
  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 注：启动防火墙后，默认没有开启任何端口，需要手动开启端口</p>
+<p>注：启动防火墙后，默认没有开启任何端口，需要手动开启端口</p>
 </li>
-<li><p>防火墙开启端口访问</p>
+<li>
+<p>防火墙开启端口访问</p>
  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 命令含义：  –zone #作用域    –add-port=80/tcp #添加端口，格式为：端口/通讯协议    –permanent #永久生效，没有此参数重启后失效</p>
-<p> 注：开启后需要重启防火墙才生效</p>
+<p>命令含义：  --zone #作用域    --add-port=80/tcp #添加端口，格式为：端口 / 通讯协议    --permanent #永久生效，没有此参数重启后失效</p>
+<p>注：开启后需要重启防火墙才生效</p>
 </li>
-<li><p>重启防火墙</p>
+<li>
+<p>重启防火墙</p>
  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/1.png"><br> 再执行 firewall-cmd –list-ports查看一次，则发现已开启：</p>
-<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/2.png"></p>
+<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/1.png" alt><br>
+再执行 firewall-cmd --list-ports 查看一次，则发现已开启：</p>
+<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/2.png" alt></p>
 </li>
-<li><p>其他常用命令：</p>
+<li>
+<p>其他常用命令：</p>
  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state         #查看防火墙状态，是否是running
 firewall-cmd --reload        #重新载入配置，比如添加规则之后，需要执行此命令
 firewall-cmd --get-zones     #列出支持的zone
@@ -479,74 +487,101 @@ firewall-cmd --remove-port&#x3D;80&#x2F;tcp --permanent    #永久移除80端口
 firewall-cmd --zone&#x3D;public --list-ports   #查看已开放的端口
 iptables -L -n               #查看规则，这个命令是和iptables的相同的
 man firewall-cmd   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2>2. 端口管理</h2></li>
-<li><p>开放端口</p>
+</li>
+</ol>
+<h2>2. 端口管理</h2>
+<ol>
+<li>
+<p>开放端口</p>
  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;5672&#x2F;tcp --permanent   # 开放5672端口
 firewall-cmd --zone&#x3D;public --remove-port&#x3D;5672&#x2F;tcp --permanent  #关闭5672端口
-firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-<li><p>查看防火墙所有开放的端口</p>
- <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>关闭防火墙</p>
-<p> 如果要开放的端口太多，嫌麻烦，可以关闭防火墙，安全性自行评估</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看防火墙状态</p>
- <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>查看监听的端口</p>
- <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/3.png"></p>
+firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>检查端口被哪个进程占用</p>
- <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt |grep 5672<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/4.png"></p>
+<li>
+<p>查看防火墙所有开放的端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>查看进程的详细信息</p>
- <pre class="line-numbers language-none"><code class="language-none">ps 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/5.png"></p>
-</li>
-<li><p>中止进程</p>
- <pre class="line-numbers language-none"><code class="language-none">kill -9 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2>3. Centos 不同版本之间的命令差别</h2>
-<h3>Centos 6.x版本 iptables</h3></li>
-<li><p>查看防火墙状态</p>
- <pre class="line-numbers language-none"><code class="language-none">service iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 如果返回 <code>iptables：Firewall is not runing.</code> 说明防火墙没有开启</p>
- <pre class="line-numbers language-none"><code class="language-none">开启防火墙：service iptables start
-关闭防火墙：service iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3>Centos 7版本 firewall</h3></li>
-<li><p>查看当前防火墙状态</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 执行后可以看到绿色字样标注的“active（running）”，说明防火墙是开启状态</p>
-</li>
-<li><p>关闭防火墙命令</p>
+<li>
+<p>关闭防火墙</p>
+<p>如果要开放的端口太多，嫌麻烦，可以关闭防火墙，安全性自行评估</p>
  <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 关闭后，使用命令systemctl status firewalld.service 可以看到，disavtive（dead）的字样，说明防火墙已经关闭</p>
 </li>
-<li><p>开启防火墙</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>关闭开机自启动，禁止防火墙服务器</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>开启开机启动</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl enable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3>CentOS7 默认使用firewalld防火墙，如果想换回iptables防火墙，可关闭firewalld并安装iptables。</h3></li>
-<li><p>安装iptables-services</p>
- <pre class="line-numbers language-none"><code class="language-none">yum install iptables-services<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>修改防火墙配置文件</p>
+<li>
+<p>查看防火墙状态</p>
+ <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>查看监听的端口</p>
+ <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/3.png" alt></p>
+</li>
+<li>
+<p>检查端口被哪个进程占用</p>
+ <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt |grep 5672<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/4.png" alt></p>
+</li>
+<li>
+<p>查看进程的详细信息</p>
+ <pre class="line-numbers language-none"><code class="language-none">ps 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/5.png" alt></p>
+</li>
+<li>
+<p>中止进程</p>
+ <pre class="line-numbers language-none"><code class="language-none">kill -9 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h2>3. Centos 不同版本之间的命令差别</h2>
+<h3>1. Centos 6.x版本 iptables</h3>
+<ol>
+<li>查看防火墙状态 <pre class="line-numbers language-none"><code class="language-none">service iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+如果返回  <code>iptables：Firewall is not runing.</code>  说明防火墙没有开启 <pre class="line-numbers language-none"><code class="language-none">开启防火墙：service iptables start
+关闭防火墙：service iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3>2. Centos 7版本 firewall</h3>
+<ol>
+<li>查看当前防火墙状态 <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+执行后可以看到绿色字样标注的 “active（running）”，说明防火墙是开启状态</li>
+<li>关闭防火墙命令 <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+关闭后，使用命令 systemctl status firewalld.service 可以看到，disavtive（dead）的字样，说明防火墙已经关闭</li>
+<li>开启防火墙 <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>关闭开机自启动，禁止防火墙服务器 <pre class="line-numbers language-none"><code class="language-none">systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>开启开机启动 <pre class="line-numbers language-none"><code class="language-none">systemctl enable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h3>3. CentOS7 默认使用firewalld防火墙，如果想换回iptables防火墙，可关闭firewalld并安装iptables。</h3>
+<ol>
+<li>
+<p>安装 iptables-services</p>
+ <pre class="line-numbers language-none"><code class="language-none">yum install iptables-services<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>修改防火墙配置文件</p>
  <pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;sysconfig&#x2F;iptables<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 默认文件是：<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/6.png"><br> 在修改之前使用telnet命令查看端口是否开放。</p>
-<p> 1.启动telnet。控制面板–&gt;程序和功能–&gt;打开或关闭windows功能–&gt;勾选Telnet的两个选项。</p>
-<p> 2.打开cmd窗口，输入telnet，如果端口关闭或者无法连接，则显示不能打开到主机的链接，链接失败；端口打开的情况下，链接成功，则进入telnet页面（全黑的），证明端口可用。</p>
-<p> （1）telnet IP 端口</p>
-<p> （2）telnet 域名 端口。<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/7.png"></p>
- <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>添加端口80、8080、3306、3690端口<br> <img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/10.png"></p>
+<p>默认文件是：<br>
+<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/6.png" alt><br>
+在修改之前使用 telnet 命令查看端口是否开放。</p>
+<p>1. 启动 telnet。控制面板–&gt; 程序和功能–&gt; 打开或关闭 windows 功能–&gt; 勾选 Telnet 的两个选项。</p>
+<p>2. 打开 cmd 窗口，输入 telnet，如果端口关闭或者无法连接，则显示不能打开到主机的链接，链接失败；端口打开的情况下，链接成功，则进入 telnet 页面（全黑的），证明端口可用。</p>
+<p>（1）telnet IP 端口</p>
+<p>（2）telnet 域名 端口。<br>
+<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/7.png" alt></p>
  <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 注意：添加在端口22上面或者下面，不要放在最后，不然不起作用。</p>
 </li>
-<li><p>重启防火墙使配置生效</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl restart iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p> 刚刚yum install iptables.service之后系统如果没有重启，iptables.service是找不到的，会报unit not fount。耽误时间的小坑！</p>
-<p> 设置防火墙开机启动: </p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl enable iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>
+<p>添加端口 80、8080、3306、3690 端口<br>
+<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/10.png" alt></p>
+<pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注意：添加在端口 22 上面或者下面，不要放在最后，不然不起作用。</p>
+</li>
+<li>
+<p>重启防火墙使配置生效</p>
+<pre class="line-numbers language-none"><code class="language-none">systemctl restart iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>刚刚 yum install iptables.service 之后系统如果没有重启，iptables.service 是找不到的，会报 unit not fount。耽误时间的小坑！</p>
+<p>设置防火墙开机启动:</p>
+<pre class="line-numbers language-none"><code class="language-none">systemctl enable iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
 
                 
