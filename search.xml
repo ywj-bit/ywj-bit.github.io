@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>群晖NAS权限设置</title>
+      <link href="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/"/>
+      <url>/2021/12/29/qun-hui-nas-quan-xian-she-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1>群晖NAS：共享文件夹、用户、群组建立及权限设置</h1><h2>1. 前提条件和目的</h2><ol><li>前提条件：NAS 版本：DSM-DS3615，先登录管理员账号进行设置</li><li>目的：用户通过 windows 网络共享，开启权限验证</li></ol><h2>2. 设置共享文件夹</h2><ol><li><p>创建共享文件夹</p><p>在群晖 DSM 中有两个位置可以创建共享文件夹一个在控制面板中，另一个在 File station 中，其中在控制面板中可以设置共享文件夹名称和删除共享文件夹。</p><p>在控制面板 ----&gt; 共享文件夹 ----&gt; 新建</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/1.jpg" alt></p></li><li><p>进入共享文件夹创建向导，填写共享文件夹的名称，选择存储的位置</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/2.jpg" alt></p></li><li><p>是否给共享文件夹加密，加密之后会有解密 key 生成（根据需要进行加密）</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/3.png" alt></p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/4.jpg" alt></p></li><li><p>是否启用共享文件夹配额，这里的配额是指这个共享文件夹能够使用整个系统多大的空间（当超过这个阀值后，再存入数据进去就会报错，并提示空间不足）<br><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/5.jpg" alt></p></li><li><p>应用完成共享文件夹的创建<br><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/6.jpg" alt></p></li><li><p>设置用户对改共享文件夹的权限<br><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/7.jpg" alt></p></li><li><p>共享文件夹创建完成<br><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/8.jpg" alt></p></li></ol><h2>3. 系统内置的共享文件夹</h2><br>    当需要这些共享文件夹的服务或应用程序启用时，系统自动创建这些系统内置的共享文件夹（这些文件夹建议不要删除，删除后可能出现套件无法正常使用）。<table><tr><th>名称</th><th>描述</th></tr><tr><td>Chat</td><td>Chat 文件夹包括应用程序中的附件，包括上传的文件、URL缩略图和配置文件的图像。此文件夹将用于安装 Chat 时自动创建。</td></tr><tr><td>web</td><td>web 文件夹存放了网站的内容。Web Station 启用后，会自动创建文件夹。</td></tr><tr><td>photo</td><td>photo 文件夹包含你要在 Photo Station 上分享的照片和视频。启用 Photo Station 或DLNA/UPnp 媒体服务器时，将自动创建此文件夹。</td></tr><tr><td>music</td><td>music 文件夹包含了你要在 Audio Station 上分享的音乐。此文件夹将于 Audio Station 启用时自动创建。</td></tr><tr><td>video</td><td>video 文件夹存放了你想通过DLNA/UPnp DMA浏览的视频文件，此文件夹将于媒体服务器启用时自动创建。</td></tr><tr><td>surveillance</td><td>surveillance 文件夹包含 Surveillance Station 录制的视频，Surveillance Station 启用后，会自动创建此文件夹。</td></tr><tr><td>home</td><td>home 文件夹为每位用户提供私密空间，以便放置只有个人才能访问的数据，用户主目录启用后，会自动创建此文件夹</td></tr><tr><td>web</td><td>web 文件夹存放了网站的内容。Web Station 启用后，会自动创建文件夹。</td></tr><tr><td>homes</td><td>homes 文件夹包含所有用户的 home 文件夹，用户主目录启用后，会自动创建此文件夹。供系统管理员可以访问并管理所有用户的home文件夹。</td></tr><tr><td>NetBackup</td><td>NetBackup 文件夹将于网络备份服务启用时自动创建</td></tr><tr></tr><tr><td>usbshare</td><td>usbshare 在将USB硬盘连接到 Synology NAS 设备的USB端口时，将会自动创建文件夹</td></tr><tr></tr><tr><td>esatashare</td><td>esatashare 在将 eSATA 硬盘连接到 Synology NAS 设备的 eSATA接口时，将会自动创建esatashare文件夹</td></tr><tr></tr></table><h2>4. 设置共享文件夹权限</h2><ol><li><p>选择控制面板 ----&gt; 共享文件夹，选择创建好的共享问价夹，单击编辑。</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/9.jpg" alt></p></li><li><p>该界面就是共享文件夹的属性面板包括：存储的位置、权限设置等。这里我们选择权限。</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/10.jpg" alt></p></li><li><p>这里我们可以看到针对用户，对该文件夹的权限设置</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/11.jpg" alt></p></li><li><p>我们还可以更加精细化给文件夹设置权限，勾选 “自定义”。在这里我们可以设置文件夹用户对这个共享文件夹，更可以设置这个文件夹和其下面的子文件夹、子文件、后代文件</p><p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/12.jpg" alt></p></li></ol><h2>5. ACL 权限可以按照以下分类</h2><ul><li><p>管理：</p><p>更改权限：这可以控制用户是否可以更改文件或文件夹权限。</p><p>取得所有权：这可以控制用户是否有文件或文件夹的所有权。</p></li><li><p>读取：</p><p>遍历文件夹 / 执行文件：这可以控制用户是否可以运行程序文件。</p><p>列出文件夹 / 读取数据：这可以控制用户是否可以读取文件数据。</p><p>读取属性：这可以控制用户是否可以查看文件属性。</p><p>读取扩展属性：这可以控制用户是否可以查看文件扩展属性。</p><p>读取权限：这可以控制用户是否可以读取文件或文件夹权限。</p></li><li><p>写入：</p><p>创建文件 / 写入数据：这可以控制用户是否可以更改文件内容。</p><p>创建文件夹 / 附加数据：这可以控制用户是否可以在文件末尾添加数据。</p><p>写入属性：这可以控制用户是否可以更改文件属性。</p><p>写入扩展属性：这可以控制用户是否可以更改文件扩展属性。</p><p>删除子文件夹和文件：这可以控制用户是否可以删除文件夹。</p><p>删除：这可以控制用户是否可以删除文件。</p></li><li><p>关于权限继承：</p><p>ACL 权限从父对象继承到子对象。例如，如果 “sales” 文件夹的 ACL 条目授予 “读取” 权限给用户 “Amy”，则该 ACL 条目将应用到 “sales” 文 件夹中的所有文件（例如：“annual report.xls”），允许用户打开文件。继承权限将显示为灰色，而对象的自身权限（或 “显式” 权限）将显示为黑色。</p></li></ul><h2>特别鸣谢</h2><ul><li><p>特别鸣谢</p><p>感谢<a href="http://www.sanzangziben.com/">三藏集团</a>给予的实践机会。如公司有股权架构，顶层设计，股权激励等需求可以访问三藏集团官网：<a href="http://www.sanzangziben.com/">http://www.sanzangziben.com/</a><br> 或直接联系：15852078135 臧先生</p><p>本文内容转载于<a href="https://zhuanlan.zhihu.com/p/146083177">知乎江东网</a></p><p>群晖 nas 购买和售后及更多内容可以访问<a href="https://jdx86.com/">江东网</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 群晖NAS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NAS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖NAS安装DSM操作系统</title>
+      <link href="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/"/>
+      <url>/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<h1>群晖NAS安装DSM系统</h1><h2>网络连接</h2>安装前提是要保证设备能够正常联网<ul><li><p>连接拓扑</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/1.png" alt></p></li></ul><p>将 NAS 中的一个口连接到网络并按电源键打开 NAS 电源</p><h2>Synology Assistant</h2><ul><li><p>在连接到同一网络的一台电脑上安装 Synology Assistant 软件， Windows 版本下载地址如下：<br><a href="https://global.download.synology.com/download/Tools/Assistant/6.2-23733/Windows/synology-assistant-6.2-23733.exe">https://global.download.synology.com/download/Tools/Assistant/6.2-23733/Windows/synology-assistant-6.2-23733.exe</a></p></li><li><p>双击未安装安装系统的 NAS 项</p><p>在弹出的对话框中打勾并点击确定</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/2.png" alt></p></li><li><p>这时系统会使用默认浏览器打开 NAS 的 Web Assistant 界面 (如果你使用的是双核浏览器，记得切换为极速模式，在群晖 NAS 使用过程中也请一直保持极速模式) 。打开页面点击设置按键</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/3.png" alt></p></li><li><p>如果你的 NAS 无法连接到互联网那你可以先将对应型号的 DSM 系统安装文件下载到电脑中，并在此步中点击手动安装，如果 NAS 可以连接到互联网，直接点击立即安装。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/4.png" alt></p></li><li><p>在弹出的对话框打勾并点击确定。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/5.png" alt></p></li><li><p>这里 Web Assistant 会自动下载对应 DSM 系统文件并安装，等待大概 10 分钟左右即可。这个网页不能关闭，安装完后会自跳转。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/6.png" alt></p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/7.png" alt></p></li><li><p>系统设置</p><p>DSM 系统安装完成后伴随着 “滴” 的一声响， NAS 就已经启动完成了。网页会自动跳转到设置页面。在下图的页面中输入服务器名称、管理员用户名、密码三个信息。这个管理员是这台 NAS 的超级管理员，所以数据都可以通过这个账号操作。群晖 NAS 中的用户名可以使用中文，但建议使用字母作为用户名，在某些环境中无法使用中文输入无法 ( 如 ABB 的系统恢复界面中 ) 。输入完三个信息后点击下一步按钮</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/8.png" alt></p></li><li><p>如果你的 NAS 需要通过互联网访问并且你的网络出口没有公网 IP ，那么你可以设置 QC 来解决此问题，设置 QC 前需要在群晖的官网注册一个 Synology 账号，注册完成后在这里输入账号信息并输入你自定义的 QC ID ，点击下一步按钮。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/9.png" alt></p></li><li><p>如果你还不是很了解群晖 NAS 的功能，那建议你直接点击下一步按钮， NAS 会自动给你安装以下应用。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/10.png" alt></p></li><li><p>在这个页面打勾的话可以当你忘记 NAS 的 IP 时在浏览器中输入 <a href="http://find.synology.com">find.synology.com</a> 来找到 NAS 。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/11.png" alt></p></li><li><p>就这样，我们进入了群晖 NAS 的 DSM 管理界面。</p><p><img src="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/12.png" alt></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 群晖NAS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NAS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux防火墙及开放端口管理</title>
       <link href="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/"/>
       <url>/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/</url>

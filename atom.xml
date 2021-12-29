@@ -6,7 +6,7 @@
   <link href="http://ywj-bit.github.io/atom.xml" rel="self"/>
   
   <link href="http://ywj-bit.github.io/"/>
-  <updated>2021-12-29T03:53:03.774Z</updated>
+  <updated>2021-12-29T11:18:05.207Z</updated>
   <id>http://ywj-bit.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>群晖NAS权限设置</title>
+    <link href="http://ywj-bit.github.io/2021/12/29/qun-hui-nas-quan-xian-she-zhi/"/>
+    <id>http://ywj-bit.github.io/2021/12/29/qun-hui-nas-quan-xian-she-zhi/</id>
+    <published>2021-12-29T10:24:04.000Z</published>
+    <updated>2021-12-29T11:18:05.207Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;群晖NAS：共享文件夹、用户、群组建立及权限设置&lt;/h1&gt;
+&lt;h2&gt;1. 前提条件和目的&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;前提条件：NAS 版本：DSM-DS3615，先登录管理员账号进行设置&lt;/li&gt;
+&lt;li&gt;目的：用户通过 windows</summary>
+        
+      
+    
+    
+    
+    <category term="群晖NAS" scheme="http://ywj-bit.github.io/categories/%E7%BE%A4%E6%99%96NAS/"/>
+    
+    
+    <category term="NAS" scheme="http://ywj-bit.github.io/tags/NAS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>群晖NAS安装DSM操作系统</title>
+    <link href="http://ywj-bit.github.io/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/"/>
+    <id>http://ywj-bit.github.io/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/</id>
+    <published>2021-12-29T10:01:15.000Z</published>
+    <updated>2021-12-29T10:22:38.829Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;群晖NAS安装DSM系统&lt;/h1&gt;
+&lt;h2&gt;网络连接&lt;/h2&gt;
+安装前提是要保证设备能够正常联网
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;连接拓扑&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="群晖NAS" scheme="http://ywj-bit.github.io/categories/%E7%BE%A4%E6%99%96NAS/"/>
+    
+    
+    <category term="NAS" scheme="http://ywj-bit.github.io/tags/NAS/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux防火墙及开放端口管理</title>

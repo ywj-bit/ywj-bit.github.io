@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux防火墙及开放端口管理, 祸袁博客">
+    <meta name="keywords" content="群晖NAS权限设置, 祸袁博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Linux防火墙及开放端口管理 | 祸袁博客</title>
+    <title>群晖NAS权限设置 | 祸袁博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -257,12 +257,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fx0.ifengimg.com%2Fres%2F2019%2FF44796BF5BB930F78A9CF008DD2F94BE5890F66A_size53_w634_h445.jpeg&refer=http%3A%2F%2Fx0.ifengimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643338737&t=696c05f1e2a2b451b9a016157294acb8')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.zhoulujun.cn%2Fuploadfile%2Fimages%2F2020%2F05%2F20200510221715158236491.jpg&refer=http%3A%2F%2Fwww.zhoulujun.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643365516&t=7324ff7be23f410be4c06daa12d78c40')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux防火墙及开放端口管理</h1>
+                    <h1 class="description center-align post-title">群晖NAS权限设置</h1>
                 </div>
             </div>
         </div>
@@ -378,8 +378,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
-                                <span class="chip bg-color">服务器操作</span>
+                            <a href="/tags/NAS/">
+                                <span class="chip bg-color">NAS</span>
                             </a>
                         
                     </div>
@@ -390,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Linux/" class="post-category">
-                                Linux
+                            <a href="/categories/%E7%BE%A4%E6%99%96NAS/" class="post-category">
+                                群晖NAS
                             </a>
                         
                     </div>
@@ -412,14 +412,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -442,146 +442,162 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1>Linux防火墙管理</h1>
-<h2>1. 防火墙开启关闭</h2>
+                <h1>群晖NAS：共享文件夹、用户、群组建立及权限设置</h1>
+<h2>1. 前提条件和目的</h2>
+<ol>
+<li>前提条件：NAS 版本：DSM-DS3615，先登录管理员账号进行设置</li>
+<li>目的：用户通过 windows 网络共享，开启权限验证</li>
+</ol>
+<h2>2. 设置共享文件夹</h2>
+<ol>
+<li>
+<p>创建共享文件夹</p>
+<p>在群晖 DSM 中有两个位置可以创建共享文件夹一个在控制面板中，另一个在 File station 中，其中在控制面板中可以设置共享文件夹名称和删除共享文件夹。</p>
+<p>在控制面板 ----&gt; 共享文件夹 ----&gt; 新建</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/1.jpg" alt></p>
+</li>
+<li>
+<p>进入共享文件夹创建向导，填写共享文件夹的名称，选择存储的位置</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/2.jpg" alt></p>
+</li>
+<li>
+<p>是否给共享文件夹加密，加密之后会有解密 key 生成（根据需要进行加密）</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/3.png" alt></p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/4.jpg" alt></p>
+</li>
+<li>
+<p>是否启用共享文件夹配额，这里的配额是指这个共享文件夹能够使用整个系统多大的空间（当超过这个阀值后，再存入数据进去就会报错，并提示空间不足）<br>
+<img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/5.jpg" alt></p>
+</li>
+<li>
+<p>应用完成共享文件夹的创建<br>
+<img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/6.jpg" alt></p>
+</li>
+<li>
+<p>设置用户对改共享文件夹的权限<br>
+<img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/7.jpg" alt></p>
+</li>
+<li>
+<p>共享文件夹创建完成<br>
+<img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/8.jpg" alt></p>
+</li>
+</ol>
+<h2>3. 系统内置的共享文件夹</h2><br>
+    当需要这些共享文件夹的服务或应用程序启用时，系统自动创建这些系统内置的共享文件夹（这些文件夹建议不要删除，删除后可能出现套件无法正常使用）。
+<table>
+<tr>
+<th>名称</th>
+<th>描述</th>
+</tr>
+<tr>
+<td>Chat</td>
+<td>Chat 文件夹包括应用程序中的附件，包括上传的文件、URL缩略图和配置文件的图像。此文件夹将用于安装 Chat 时自动创建。</td>
+</tr>
+<tr>
+<td>web</td>
+<td>web 文件夹存放了网站的内容。Web Station 启用后，会自动创建文件夹。</td>
+</tr>
+<tr>
+<td>photo</td>
+<td>photo 文件夹包含你要在 Photo Station 上分享的照片和视频。启用 Photo Station 或DLNA/UPnp 媒体服务器时，将自动创建此文件夹。</td>
+</tr>
+<tr>
+<td>music</td>
+<td>music 文件夹包含了你要在 Audio Station 上分享的音乐。此文件夹将于 Audio Station 启用时自动创建。</td>
+</tr>
+<tr>
+<td>video</td>
+<td>video 文件夹存放了你想通过DLNA/UPnp DMA浏览的视频文件，此文件夹将于媒体服务器启用时自动创建。</td>
+</tr>
+<tr>
+<td>surveillance</td>
+<td>surveillance 文件夹包含 Surveillance Station 录制的视频，Surveillance Station 启用后，会自动创建此文件夹。</td>
+</tr>
+<tr>
+<td>home</td>
+<td>home 文件夹为每位用户提供私密空间，以便放置只有个人才能访问的数据，用户主目录启用后，会自动创建此文件夹</td>
+</tr>
+<tr>
+<td>web</td>
+<td>web 文件夹存放了网站的内容。Web Station 启用后，会自动创建文件夹。</td>
+</tr>
+<tr>
+<td>homes</td>
+<td>homes 文件夹包含所有用户的 home 文件夹，用户主目录启用后，会自动创建此文件夹。供系统管理员可以访问并管理所有用户的home文件夹。</td>
+</tr>
+<tr>
+<td>NetBackup</td>
+<td>NetBackup 文件夹将于网络备份服务启用时自动创建</td>
+</tr>
+<tr>
+</tr><tr>
+<td>usbshare</td>
+<td>usbshare 在将USB硬盘连接到 Synology NAS 设备的USB端口时，将会自动创建文件夹</td>
+</tr>
+<tr>
+</tr><tr>
+<td>esatashare</td>
+<td>esatashare 在将 eSATA 硬盘连接到 Synology NAS 设备的 eSATA接口时，将会自动创建esatashare文件夹</td>
+</tr>
+<tr>
+</tr></table>
+<h2>4. 设置共享文件夹权限</h2>
+<ol>
+<li>
+<p>选择控制面板 ----&gt; 共享文件夹，选择创建好的共享问价夹，单击编辑。</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/9.jpg" alt></p>
+</li>
+<li>
+<p>该界面就是共享文件夹的属性面板包括：存储的位置、权限设置等。这里我们选择权限。</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/10.jpg" alt></p>
+</li>
+<li>
+<p>这里我们可以看到针对用户，对该文件夹的权限设置</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/11.jpg" alt></p>
+</li>
+<li>
+<p>我们还可以更加精细化给文件夹设置权限，勾选 “自定义”。在这里我们可以设置文件夹用户对这个共享文件夹，更可以设置这个文件夹和其下面的子文件夹、子文件、后代文件</p>
+<p><img src="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/12.jpg" alt></p>
+</li>
+</ol>
+<h2>5. ACL 权限可以按照以下分类</h2>
 <ul>
 <li>
-<p>查看防火墙状态，是否开启？</p>
-  <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>管理：</p>
+<p>更改权限：这可以控制用户是否可以更改文件或文件夹权限。</p>
+<p>取得所有权：这可以控制用户是否有文件或文件夹的所有权。</p>
 </li>
 <li>
-<p>开启关闭防火墙</p>
-  <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld  #开启防火墙
-systemctl stop firewalld    #关闭防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>读取：</p>
+<p>遍历文件夹 / 执行文件：这可以控制用户是否可以运行程序文件。</p>
+<p>列出文件夹 / 读取数据：这可以控制用户是否可以读取文件数据。</p>
+<p>读取属性：这可以控制用户是否可以查看文件属性。</p>
+<p>读取扩展属性：这可以控制用户是否可以查看文件扩展属性。</p>
+<p>读取权限：这可以控制用户是否可以读取文件或文件夹权限。</p>
 </li>
 <li>
-<p>查看所有开启的端口</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>注：启动防火墙后，默认没有开启任何端口，需要手动开启端口</p>
+<p>写入：</p>
+<p>创建文件 / 写入数据：这可以控制用户是否可以更改文件内容。</p>
+<p>创建文件夹 / 附加数据：这可以控制用户是否可以在文件末尾添加数据。</p>
+<p>写入属性：这可以控制用户是否可以更改文件属性。</p>
+<p>写入扩展属性：这可以控制用户是否可以更改文件扩展属性。</p>
+<p>删除子文件夹和文件：这可以控制用户是否可以删除文件夹。</p>
+<p>删除：这可以控制用户是否可以删除文件。</p>
 </li>
 <li>
-<p>防火墙开启端口访问</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;80&#x2F;tcp --permanent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>命令含义：  --zone #作用域    --add-port=80/tcp #添加端口，格式为：端口 / 通讯协议    --permanent #永久生效，没有此参数重启后失效</p>
-<p>注：开启后需要重启防火墙才生效</p>
-</li>
-<li>
-<p>重启防火墙</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/1.png" alt><br>
-再执行 firewall-cmd --list-ports 查看一次，则发现已开启：</p>
-<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/2.png" alt></p>
-</li>
-<li>
-<p>其他常用命令：</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state         #查看防火墙状态，是否是running
-firewall-cmd --reload        #重新载入配置，比如添加规则之后，需要执行此命令
-firewall-cmd --get-zones     #列出支持的zone
-firewall-cmd --get-services  #列出支持的服务，在列表中的服务是放行的
-firewall-cmd --query-service ftp   #查看ftp服务是否支持，返回yes或者no
-firewall-cmd --add-service&#x3D;ftp      #临时开放ftp服务
-firewall-cmd --add-service&#x3D;ftp --permanent    #永久开放ftp服务
-firewall-cmd --remove-service&#x3D;ftp --permanent  #永久移除ftp服务
-firewall-cmd --add-port&#x3D;80&#x2F;tcp --permanent    #永久添加80端口 
-firewall-cmd --remove-port&#x3D;80&#x2F;tcp --permanent    #永久移除80端口 
-firewall-cmd --zone&#x3D;public --list-ports   #查看已开放的端口
-iptables -L -n               #查看规则，这个命令是和iptables的相同的
-man firewall-cmd   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>关于权限继承：</p>
+<p>ACL 权限从父对象继承到子对象。例如，如果 “sales” 文件夹的 ACL 条目授予 “读取” 权限给用户 “Amy”，则该 ACL 条目将应用到 “sales” 文 件夹中的所有文件（例如：“annual report.xls”），允许用户打开文件。继承权限将显示为灰色，而对象的自身权限（或 “显式” 权限）将显示为黑色。</p>
 </li>
 </ul>
-<h2>2. 端口管理</h2>
+<h2>特别鸣谢</h2>
 <ul>
 <li>
-<p>开放端口</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --add-port&#x3D;5672&#x2F;tcp --permanent   # 开放5672端口
-firewall-cmd --zone&#x3D;public --remove-port&#x3D;5672&#x2F;tcp --permanent  #关闭5672端口
-firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>特别鸣谢</p>
+<p>感谢<a target="_blank" rel="noopener" href="http://www.sanzangziben.com/">三藏集团</a>给予的实践机会。如公司有股权架构，顶层设计，股权激励等需求可以访问三藏集团官网：<a target="_blank" rel="noopener" href="http://www.sanzangziben.com/">http://www.sanzangziben.com/</a><br>
+ 或直接联系：15852078135 臧先生</p>
+<p>本文内容转载于<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/146083177">知乎江东网</a></p>
+<p>群晖 nas 购买和售后及更多内容可以访问<a target="_blank" rel="noopener" href="https://jdx86.com/">江东网</a></p>
 </li>
-<li>
-<p>查看防火墙所有开放的端口</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --zone&#x3D;public --list-ports<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>
-<p>关闭防火墙</p>
-<p>如果要开放的端口太多，嫌麻烦，可以关闭防火墙，安全性自行评估</p>
-  <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>
-<p>查看防火墙状态</p>
-  <pre class="line-numbers language-none"><code class="language-none">firewall-cmd --state<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>
-<p>查看监听的端口</p>
-  <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/3.png" alt></p>
-</li>
-<li>
-<p>检查端口被哪个进程占用</p>
-  <pre class="line-numbers language-none"><code class="language-none">netstat -lnpt |grep 5672<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/4.png" alt></p>
-</li>
-<li>
-<p>查看进程的详细信息</p>
-  <pre class="line-numbers language-none"><code class="language-none">ps 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/5.png" alt></p>
-</li>
-<li>
-<p>中止进程</p>
-  <pre class="line-numbers language-none"><code class="language-none">kill -9 6832<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
-<h2>3. Centos 不同版本之间的命令差别</h2>
-<h3>1. Centos 6.x版本 iptables</h3>
-<ul>
-<li>查看防火墙状态  <pre class="line-numbers language-none"><code class="language-none">service iptables status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-如果返回  <code>iptables：Firewall is not runing.</code>  说明防火墙没有开启  <pre class="line-numbers language-none"><code class="language-none">开启防火墙：service iptables start
-关闭防火墙：service iptables stop<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-</ul>
-<h3>2. Centos 7版本 firewall</h3>
-<ul>
-<li>查看当前防火墙状态  <pre class="line-numbers language-none"><code class="language-none">systemctl status firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-执行后可以看到绿色字样标注的 “active（running）”，说明防火墙是开启状态</li>
-<li>关闭防火墙命令  <pre class="line-numbers language-none"><code class="language-none">systemctl stop firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-关闭后，使用命令 systemctl status firewalld.service 可以看到，disavtive（dead）的字样，说明防火墙已经关闭</li>
-<li>开启防火墙  <pre class="line-numbers language-none"><code class="language-none">systemctl start firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>关闭开机自启动，禁止防火墙服务器  <pre class="line-numbers language-none"><code class="language-none">systemctl disable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>开启开机启动  <pre class="line-numbers language-none"><code class="language-none">systemctl enable firewalld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
-<h3>3. CentOS7 默认使用firewalld防火墙，如果想换回iptables防火墙，可关闭firewalld并安装iptables。</h3>
-<ul>
-<li>
-<p>安装 iptables-services</p>
-  <pre class="line-numbers language-none"><code class="language-none">yum install iptables-services<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>
-<p>修改防火墙配置文件</p>
-  <pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;sysconfig&#x2F;iptables<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>默认文件是：<br>
-<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/6.png" alt><br>
-在修改之前使用 telnet 命令查看端口是否开放。</p>
-<p>1. 启动 telnet。控制面板–&gt; 程序和功能–&gt; 打开或关闭 windows 功能–&gt; 勾选 Telnet 的两个选项。</p>
-<p>2. 打开 cmd 窗口，输入 telnet，如果端口关闭或者无法连接，则显示不能打开到主机的链接，链接失败；端口打开的情况下，链接成功，则进入 telnet 页面（全黑的），证明端口可用。</p>
-<p>（1）telnet IP 端口</p>
-<p>（2）telnet 域名 端口。<br>
-<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/7.png" alt></p>
-  <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>
-<p>添加端口 80、8080、3306、3690 端口<br>
-<img src="/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/10.png" alt></p>
- <pre class="line-numbers language-none"><code class="language-none">esc :wq! 退出保存修改。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>注意：添加在端口 22 上面或者下面，不要放在最后，不然不起作用。</p>
-</li>
-<li>
-<p>重启防火墙使配置生效</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl restart iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>刚刚 yum install iptables.service 之后系统如果没有重启，iptables.service 是找不到的，会报 unit not fount。耽误时间的小坑！</p>
-<p>设置防火墙开机启动:</p>
- <pre class="line-numbers language-none"><code class="language-none">systemctl enable iptables.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 
                 
@@ -609,7 +625,7 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/">http://ywj-bit.github.io/2021/12/29/linux-fang-huo-qiang-ji-kai-fang-duan-kou-guan-li/</a>
+                    <a href="http://ywj-bit.github.io/2021/12/29/qun-hui-nas-quan-xian-she-zhi/">http://ywj-bit.github.io/2021/12/29/qun-hui-nas-quan-xian-she-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,8 +663,8 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%93%8D%E4%BD%9C/">
-                                    <span class="chip bg-color">服务器操作</span>
+                                <a href="/tags/NAS/">
+                                    <span class="chip bg-color">NAS</span>
                                 </a>
                             
                         </div>
@@ -1142,28 +1158,29 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/">
+                <a href="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fdec3e4a5cc63e42930c965094b0749455d923a5c.gif&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643364161&t=80e45e80b216d7b19a75e1978f8e96ee" class="responsive-img" alt="群晖NAS安装DSM操作系统">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.zhoulujun.cn%2Fuploadfile%2Fimages%2F2020%2F05%2F20200510221715158236491.jpg&refer=http%3A%2F%2Fwww.zhoulujun.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643365516&t=7324ff7be23f410be4c06daa12d78c40" class="responsive-img" alt="群晖NAS权限设置">
                         
-                        <span class="card-title">群晖NAS安装DSM操作系统</span>
+                        <span class="card-title">群晖NAS权限设置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            群晖NAS安装DSM操作系统，可视化页面管理设备。
+                            群晖NAS：共享文件夹、用户、群组建立及权限设置
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1176,6 +1193,7 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1194,30 +1212,30 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/27/mysql-ming-ling-he-ji/">
+                <a href="/2021/12/29/qun-hui-nas-an-zhuang-dsm-cao-zuo-xi-tong/">
                     <div class="card-image">
                         
-                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.duozhishidai.com%2Fdata%2Fattachment%2Fportal%2F202010%2F15%2F003538zz9xczq7ojjcq0pc.jpg&refer=http%3A%2F%2Fwww.duozhishidai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643195767&t=9c4407c8fc17b8f2a3746cf1cf7a8049" class="responsive-img" alt="MySQL命令合集">
+                        <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fdec3e4a5cc63e42930c965094b0749455d923a5c.gif&refer=http%3A%2F%2Fi0.hdslb.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1643364161&t=80e45e80b216d7b19a75e1978f8e96ee" class="responsive-img" alt="群晖NAS安装DSM操作系统">
                         
-                        <span class="card-title">MySQL命令合集</span>
+                        <span class="card-title">群晖NAS安装DSM操作系统</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MySQL的常用命令记录
+                            群晖NAS安装DSM操作系统，可视化页面管理设备。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category">
-                                    MySQL
+                            <a href="/categories/%E7%BE%A4%E6%99%96NAS/" class="post-category">
+                                    群晖NAS
                                 </a>
                             
                             
@@ -1227,8 +1245,8 @@ firewall-cmd --reload   # 配置立即生效<span aria-hidden="true" class="line
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/NAS/">
+                        <span class="chip bg-color">NAS</span>
                     </a>
                     
                 </div>
