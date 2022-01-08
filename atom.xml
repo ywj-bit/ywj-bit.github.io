@@ -6,7 +6,7 @@
   <link href="https://www.ywjjieer.com/atom.xml" rel="self"/>
   
   <link href="https://www.ywjjieer.com/"/>
-  <updated>2021-12-29T11:18:05.207Z</updated>
+  <updated>2022-01-08T08:47:57.986Z</updated>
   <id>https://www.ywjjieer.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ipad隐藏的bug</title>
+    <link href="https://www.ywjjieer.com/2022/01/08/ipad-yin-cang-de-bug/"/>
+    <id>https://www.ywjjieer.com/2022/01/08/ipad-yin-cang-de-bug/</id>
+    <published>2022-01-08T08:27:43.000Z</published>
+    <updated>2022-01-08T08:47:57.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;iOS系统在使用过程中遇到的bugh问题记录&lt;/h1&gt;
+&lt;h2&gt;一、iPad&lt;/h2&gt;
+&lt;h3&gt;1.无线局域网连接问题&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无线局域网连接&lt;/p&gt;
+&lt;p&gt;当需要连接的局域网内没有接入外网时，iPad</summary>
+        
+      
+    
+    
+    
+    <category term="iPad" scheme="https://www.ywjjieer.com/categories/iPad/"/>
+    
+    
+    <category term="bug" scheme="https://www.ywjjieer.com/tags/bug/"/>
+    
+  </entry>
   
   <entry>
     <title>群晖NAS权限设置</title>

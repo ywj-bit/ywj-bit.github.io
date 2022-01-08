@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ipad隐藏的bug</title>
+      <link href="/2022/01/08/ipad-yin-cang-de-bug/"/>
+      <url>/2022/01/08/ipad-yin-cang-de-bug/</url>
+      
+        <content type="html"><![CDATA[<h1>iOS系统在使用过程中遇到的bugh问题记录</h1><h2>一、iPad</h2><h3>1.无线局域网连接问题</h3><ul><li><p>无线局域网连接</p><p>当需要连接的局域网内没有接入外网时，iPad 的在设置中，会显示已经连接了网络</p><p>但是此时访问局域网 ip 和应用是连不通的，提示没有网络连接，这个是因为在 iOS 系统中，当连接的网络无法访问 Internet 时，系统默认自动断开</p></li><li><p>解决办法</p><ol><li>进入路由器设置，修改路由器接入点设置，这个方法是我给 apple 官方反馈后得到的解决办法，但是并没有去使用。因为需要路由器支持接入点设置，很遗憾家里的路由器并不支持。公司的企业级路由器支持但是没有访问权限。</li><li>使用 Android 设备（貌似是废话）</li><li>将路由器接入 Internet ，因为如果局域网无外网权限时，那肯定是因为有系统和需求需要在同一网络下使用，这个时候就暂时性的开放网络就可以了。</li><li>等待苹果官方解决，我反馈了这个问题，但是至于官方是否会重视，多久会处理，就不得而知了，等吧</li></ol></li></ul><h3>2.位置权限获取</h3><ul><li><p>位置权限</p><p>iOS 更新到 15 版本以后，有些应用在获取位置权限时会出现问题，这个是需要修改代码，15 更新和之前有些大的区别，详情查看 iOS 15.1 API</p></li></ul><h2>未完待续</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> iPad </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>群晖NAS权限设置</title>
       <link href="/2021/12/29/qun-hui-nas-quan-xian-she-zhi/"/>
       <url>/2021/12/29/qun-hui-nas-quan-xian-she-zhi/</url>
