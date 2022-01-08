@@ -176,13 +176,6 @@
   </url>
   
   <url>
-    <loc>https://www.ywjjieer.com/tags/%E5%A3%81%E7%BA%B8/</loc>
-    <lastmod>2022-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ywjjieer.com/tags/bug/</loc>
     <lastmod>2022-01-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,6 +184,13 @@
   
   <url>
     <loc>https://www.ywjjieer.com/tags/NAS/</loc>
+    <lastmod>2022-01-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ywjjieer.com/tags/%E5%A3%81%E7%BA%B8/</loc>
     <lastmod>2022-01-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
