@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.ywjjieer.com/2022/01/15/hu-nian-da-ji/</loc>
+    <lastmod>2022-01-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ywjjieer.com/2021/12/22/yi-lu-zou-lai/</loc>
+    <lastmod>2022-01-15</lastmod>
+  </url>
+  <url>
     <loc>https://www.ywjjieer.com/2022/01/15/fei-chang-shi-yong-de-wang-zhan/</loc>
     <lastmod>2022-01-15</lastmod>
   </url>
@@ -39,9 +47,5 @@
   <url>
     <loc>https://www.ywjjieer.com/2021/12/24/linux-chang-yong-ming-ling/</loc>
     <lastmod>2021-12-27</lastmod>
-  </url>
-  <url>
-    <loc>https://www.ywjjieer.com/2021/12/22/fist/</loc>
-    <lastmod>2021-12-22</lastmod>
   </url>
 </urlset> 
